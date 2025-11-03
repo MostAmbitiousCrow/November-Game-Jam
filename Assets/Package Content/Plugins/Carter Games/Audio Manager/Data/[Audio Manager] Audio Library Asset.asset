@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0876a39f507e45142a645a4fe9dd37df, type: 3}
+  m_Name: '[Audio Manager] Audio Library Asset'
+  m_EditorClassIdentifier: 
+  library:
+    list: []
+  groups:
+    list: []
+  mixers:
+    list:
+    - key: 7c4f32ab-a852-465a-ac4f-0c7cd5c18cf6
+      value:
+        uuid: 7c4f32ab-a852-465a-ac4f-0c7cd5c18cf6
+        key: Master7c4f32ab
+        path: Assets/Audio/AudioMixer.mixer
+        mixerGroup: {fileID: 24300002, guid: eb22f722c2147b14ea522ab51977e6a2, type: 2}
+    - key: 39635605-9a85-4a8f-a936-c32a70649b69
+      value:
+        uuid: 39635605-9a85-4a8f-a936-c32a70649b69
+        key: Effect39635605
+        path: Assets/Audio/AudioMixer.mixer
+        mixerGroup: {fileID: -4275755406688029215, guid: eb22f722c2147b14ea522ab51977e6a2, type: 2}
+  categories: []
+  tags: []
