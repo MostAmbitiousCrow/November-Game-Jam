@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d983e926e97984740866ef0df014ac2d, type: 3}
+  m_Name: '[Audio Manager] Asset Index'
+  m_EditorClassIdentifier: 
+  assets:
+    list:
+    - key: CarterGames.Assets.AudioManager.AudioLibrary
+      value:
+      - {fileID: 11400000, guid: c5b27151867dc194faef6906a639d4b5, type: 2}
+    - key: CarterGames.Assets.AudioManager.AmAssetSettings
+      value:
+      - {fileID: 11400000, guid: 3097151f475acb04389d4ecf2ecffc29, type: 2}
