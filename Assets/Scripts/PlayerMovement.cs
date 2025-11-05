@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     private InputSystem_Actions playerInputActions;
-    
+    public Rigidbody rb;
     public float moveInput;
     public Vector3 throwInput;
     public Vector3 mousePos;
@@ -77,38 +77,25 @@ public class PlayerMovement : MonoBehaviour
             moveDirection = mouseStartPoint - mouseEndPoint;
             float angle = Mathf.Atan2(-moveDirection.x, -moveDirection.y) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.AngleAxis(-angle + 180, Vector3.forward);
-            PowerCalc();
-            StartCoroutine(MovePlayer(power));
+            PowerCalcAndMove();
+            
+            //StartCoroutine(MovePlayer(power));
         }
     }
-
     public void OnFGrab(InputAction.CallbackContext context)
     {
         throwInput = context.ReadValue<Vector3>();
         Debug.Log(throwInput);
     }
-
-    private IEnumerator MovePlayer(float waitTime)
-    {
-        //Moves the player for a time designated by the distance from PowerCalc()
-        //Speed of the player decreases to 0 as it travels
-        float timer = 0;
-        speed = waitTime;
-        while (timer < waitTime)
-        {
-            transform.Translate(transform.up * (speed * Time.deltaTime), Space.World);
-            timer += Time.deltaTime;
-            speed -= Time.deltaTime;
-            yield return null;
-        }
-    }
-
-    public void PowerCalc()
+    public void PowerCalcAndMove()
     {
         //Figures out how far the player needs to move based on the distance between the 2 mouse points
         range = Vector3.Distance(mouseStartPoint, mouseEndPoint);
-        Debug.Log(range);
-        power = range / 100;
+        var powerX = moveDirection.x / 200;
+        var powerY = moveDirection.y / 200;
+        rb.AddForce(powerX, powerY, 0, ForceMode.Impulse);
+        Debug.Log("X =" + powerX);
+        Debug.Log("Y = " + powerY);
 
     }
 
