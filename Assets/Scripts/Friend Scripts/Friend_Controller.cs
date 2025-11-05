@@ -1,4 +1,5 @@
 using EditorAttributes;
+using System.Collections;
 using UnityEngine;
 
 public class Friend_Controller : MonoBehaviour
@@ -7,17 +8,19 @@ public class Friend_Controller : MonoBehaviour
     [SerializeField] float _armLength = 1f;
     [Space]
     [SerializeField] FriendRole _role;
-    [SerializeField, ReadOnly] int _ID;
-    public int ID { get { return _ID; } }
+    public FriendRole Role { get { return _role; } }
+    public int ID;
     [SerializeField] bool _isConnected;
+    [SerializeField] bool _canConnect = true;
     public bool IsConnected { get { return _isConnected; } }
 
-    [Header("")]
     [SerializeField] float _detectRange = 5f;
     [SerializeField] LayerMask _playerMask;
 
     [Header("Components")]
     [SerializeField] Hand_Connector _handConnector;
+    [SerializeField] Rigidbody _rb;
+    public Rigidbody Rb { get { return _rb; } }
 
     //private void Start()
     //{
@@ -31,7 +34,7 @@ public class Friend_Controller : MonoBehaviour
 
     void DetectPlayer()
     {
-        if (_isConnected) return;
+        if (_isConnected || !_canConnect) return;
 
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, _detectRange, _playerMask);
         if (hitColliders.Length > 0)
@@ -45,6 +48,7 @@ public class Friend_Controller : MonoBehaviour
                 playerHand.AssignConnectedHand(_handConnector);
 
                 _handConnector.ConnectHand(playerHand);
+                Friend_Chain_Controller.instance.AddFriend(this);
 
                 _isConnected = true;
             }
@@ -56,9 +60,22 @@ public class Friend_Controller : MonoBehaviour
         friend._handConnector.AssignConnectedHand(_handConnector);
     }
 
-    public void TriggerThrow()
+    public void OnThrown()
     {
+        _handConnector.UnassignConnectedHand();
+        Friend_Chain_Controller.instance.RemoveFriend(ID);
         _isConnected = false;
+        ID = 0;
+        StartCoroutine(ChainCooldown());
+    }
+
+    IEnumerator ChainCooldown()
+    {
+        print("Thrown");
+        _canConnect = false;
+        yield return new WaitForSeconds(2f);
+        _canConnect = true;
+
     }
 
     private void OnDrawGizmosSelected()

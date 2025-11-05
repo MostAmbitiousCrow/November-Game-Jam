@@ -4,25 +4,52 @@ using System.Collections.Generic;
 
 public class Friend_Chain_Controller : MonoBehaviour
 {
-    //public List<Hand_Connector> ConnectedHands { get { return _connectedHands; } }
-    [SerializeField] List<Hand_Connector> _connectedHands;
+    public static Friend_Chain_Controller instance;
+    [SerializeField] List<Friend_Controller> _connectedHands;
 
-    public void AddFriend(Hand_Connector hand)
+    private void Awake()
     {
-        _connectedHands.Insert(_connectedHands.Count, hand);
+        instance = this;
     }
 
-    public void RemoveFriend(Hand_Connector hand)
+    public void AddFriend(Friend_Controller friend)
     {
-        if (_connectedHands.Contains(hand))
-            _connectedHands.Remove(hand);
+        _connectedHands.Add(friend);
+        friend.ID = _connectedHands.Count - 1;
     }
 
-    public Hand_Connector GetLastFriend()
+    public void RemoveFriend(int friendID)
+    {
+        _connectedHands.RemoveAt(friendID);
+        int id = 0;
+        foreach (var item in _connectedHands)
+        {
+            item.ID = id;
+            id++;
+        }
+    }
+
+    public Friend_Controller GetLastFriend()
     {
         if (_connectedHands != null)
             return _connectedHands[^1];
         else
             return null;
+    }
+
+    public Friend_Controller GetCurrentFriend()
+    {
+        if (_connectedHands.Count > 0)
+            return _connectedHands[0];
+        else
+            return null;
+    }
+
+    public bool FriendCheck()
+    {
+        if (_connectedHands.Count > 0)
+            return true;
+        else
+            return false;
     }
 }

@@ -6,22 +6,20 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     private InputSystem_Actions playerInputActions;
-    public Rigidbody rb;
-    public float moveInput;
-    public Vector3 throwInput;
-    public Vector3 mousePos;
-    public Vector3 moveDirection;
+    [SerializeField] Rigidbody rb;
+    Vector3 throwInput;
+    Vector3 mousePos;
+    [SerializeField] Vector3 _playerMoveDirection, _friendMovedirection;
 
-    public Vector3 mouseStartPoint;
-    public Vector3 mouseEndPoint;
+    Vector3 mouseStartPoint;
+    Vector3 mouseEndPoint;
 
-    public float speed;
-    public float range;
+    float speed;
+    [SerializeField] float range;
     [SerializeField] float power = 5f;
 
-    public bool arrowAppear;
-    public LineRenderer arrowRenderer;
-    public Material arrowMaterial;
+    [SerializeField] bool _playerArrowActive, _friendArrowActive;
+    [SerializeField] LineRenderer _playerArrowRenderer, _friendArrowRenderer;
 
     [Header("Components")]
     [SerializeField] Hand_Connector _currentHandConnector;
@@ -30,11 +28,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        arrowRenderer = GetComponent<LineRenderer>();
-        arrowRenderer.material = arrowMaterial;
-        arrowRenderer.startWidth = 0.5f;
-        arrowRenderer.endWidth = 0.1f;
-
         if (_currentHandConnector) _currentHandConnector.AssignConnectedHand(_thisHandConnector);
     }
     void OnEnable()
@@ -58,15 +51,15 @@ public class PlayerMovement : MonoBehaviour
     public void OnPGrab(InputAction.CallbackContext context)
     {
         //Reads whether the LMB is being pressed
-        moveInput = context.ReadValue<float>();
-        if (moveInput == 1)
+        float moveInput = context.ReadValue<float>();
+        if (moveInput == 1f)
         {
             //gets current mouse position
             mousePos = Mouse.current.position.ReadValue();
             mousePos.z = Camera.main.farClipPlane * .5f;
             mouseStartPoint = Camera.main.ScreenToWorldPoint(mousePos);
-            Debug.Log("Mouse pos: " + mouseStartPoint);
-            arrowAppear = true;
+            //Debug.Log("Mouse pos: " + mouseStartPoint);
+            _playerArrowActive = true;
         }
 
         if (moveInput == 0)
@@ -74,14 +67,15 @@ public class PlayerMovement : MonoBehaviour
             mousePos = Mouse.current.position.ReadValue();
             mousePos.z = Camera.main.farClipPlane * .5f;
             mouseEndPoint = Camera.main.ScreenToWorldPoint(mousePos);
-            Debug.Log("Mouse pos: " + mouseEndPoint);
+            //Debug.Log("Mouse pos: " + mouseEndPoint);
             //Disables the line after mouse is let go
-            arrowAppear = false;
-            arrowRenderer.positionCount = 0;
+            _playerArrowActive = false;
+            _playerArrowRenderer.positionCount = 0;
             
             //Finds the angle between the first and second mouse point then angles that game object in that direction
-            moveDirection = mouseStartPoint - mouseEndPoint;
-            float angle = Mathf.Atan2(-moveDirection.x, -moveDirection.y) * Mathf.Rad2Deg;
+            _playerMoveDirection = mouseStartPoint - mouseEndPoint;
+            float angle = Mathf.Atan2(-_playerMoveDirection.x, -_playerMoveDirection.y) * Mathf.Rad2Deg;
+            //rb.MoveRotation(Quaternion.AngleAxis(-angle + 180, Vector3.forward)); // Rb alternative
             transform.rotation = Quaternion.AngleAxis(-angle + 180, Vector3.forward);
             PowerCalcAndMove();
             
@@ -90,16 +84,64 @@ public class PlayerMovement : MonoBehaviour
     }
     public void OnFGrab(InputAction.CallbackContext context)
     {
-        throwInput = context.ReadValue<Vector3>();
+        if (!Friend_Chain_Controller.instance.FriendCheck())
+            return;
+
+        Friend_Controller selectedFriend = Friend_Chain_Controller.instance.GetCurrentFriend();
+
+        //Reads whether the LMB is being pressed
+        float moveInput = context.ReadValue<float>();
+        if (moveInput == 1f)
+        {
+            //gets current mouse position
+            mousePos = Mouse.current.position.ReadValue();
+            mousePos.z = Camera.main.farClipPlane * .5f;
+            mouseStartPoint = Camera.main.ScreenToWorldPoint(mousePos);
+            //Debug.Log("Mouse pos: " + mouseStartPoint);
+            _friendArrowActive = true;
+        }
+
+        if (moveInput == 0)
+        {
+            mousePos = Mouse.current.position.ReadValue();
+            mousePos.z = Camera.main.farClipPlane * .5f;
+            mouseEndPoint = Camera.main.ScreenToWorldPoint(mousePos);
+            //Debug.Log("Mouse pos: " + mouseEndPoint);
+            //Disables the line after mouse is let go
+            _friendArrowActive = false;
+            _friendArrowRenderer.positionCount = 0;
+
+            //Finds the angle between the first and second mouse point then angles that game object in that direction
+            _friendMovedirection = mouseStartPoint - mouseEndPoint;
+            float angle = Mathf.Atan2(-_playerMoveDirection.x, -_playerMoveDirection.y) * Mathf.Rad2Deg;
+            //selectedFriend.Rb.MoveRotation(Quaternion.AngleAxis(-angle + 180, Vector3.forward)); // Rb alternative
+            selectedFriend.transform.rotation = Quaternion.AngleAxis(-angle + 180, Vector3.forward);
+            FriendPowerCalcAndMove(selectedFriend);
+
+            //StartCoroutine(MovePlayer(power));
+        }
+
         Debug.Log(throwInput);
     }
     public void PowerCalcAndMove()
     {
         //Figures out how far the player needs to move based on the distance between the 2 mouse points
         range = Vector3.Distance(mouseStartPoint, mouseEndPoint);
-        var powerX = moveDirection.x / 200f * power;
-        var powerY = moveDirection.y / 200f * power;
+        var powerX = _playerMoveDirection.x * power;
+        var powerY = _playerMoveDirection.y * power;
         rb.AddForce(powerX, powerY, 0, ForceMode.Impulse);
+        //Debug.Log("X =" + powerX);
+        //Debug.Log("Y = " + powerY);
+
+    }
+    public void FriendPowerCalcAndMove(Friend_Controller selectedFriend)
+    {
+        //Figures out how far the player needs to move based on the distance between the 2 mouse points
+        range = Vector3.Distance(mouseStartPoint, mouseEndPoint);
+        var powerX = _friendMovedirection.x * power;
+        var powerY = _friendMovedirection.y * power;
+        selectedFriend.Rb.AddForce(powerX, powerY, 0, ForceMode.Impulse);
+        selectedFriend.OnThrown();
         //Debug.Log("X =" + powerX);
         //Debug.Log("Y = " + powerY);
 
@@ -107,15 +149,25 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (arrowAppear)
+        if (_playerArrowActive)
         {
             //will draw a line to show the players headed direction if the mouse is currently held down
             mousePos = Mouse.current.position.ReadValue();
             mousePos.z = Camera.main.farClipPlane * .5f;
             var mousePoint = Camera.main.ScreenToWorldPoint(mousePos);
-            arrowRenderer.positionCount = 2;
-            arrowRenderer.SetPosition(0, transform.position);
-            arrowRenderer.SetPosition(1, mousePoint);
+            _playerArrowRenderer.positionCount = 2;
+            _playerArrowRenderer.SetPosition(0, transform.position);
+            _playerArrowRenderer.SetPosition(1, mousePoint);
+        }
+        if (_friendArrowActive)
+        {
+            //will draw a line to show the players headed direction if the mouse is currently held down
+            mousePos = Mouse.current.position.ReadValue();
+            mousePos.z = Camera.main.farClipPlane * .5f;
+            var mousePoint = Camera.main.ScreenToWorldPoint(mousePos);
+            _friendArrowRenderer.positionCount = 2;
+            _friendArrowRenderer.SetPosition(0, transform.position);
+            _friendArrowRenderer.SetPosition(1, mousePoint);
         }
     }
    

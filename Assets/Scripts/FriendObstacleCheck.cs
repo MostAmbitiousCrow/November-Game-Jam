@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class FriendObstacleCheck : MonoBehaviour
 {
-    [SerializeField] private string friendNeeded; //Change to enum in final script!!!
+    [SerializeField] FriendRole _friendRoleRequirement;
     
     //Script goes on obstacle
     //When a friend triggers it, check if the current friend type matches the friend needed
@@ -10,8 +10,8 @@ public class FriendObstacleCheck : MonoBehaviour
     {
         if (other.CompareTag("Friend"))
         {
-            var script = other.GetComponent<FriendScript>();
-            if (friendNeeded == script.friendType)
+            var friend = other.GetComponent<Friend_Controller>();
+            if (_friendRoleRequirement == friend.Role)
             {
                 Debug.Log("Correct Friend");
                 Destroy(gameObject);
