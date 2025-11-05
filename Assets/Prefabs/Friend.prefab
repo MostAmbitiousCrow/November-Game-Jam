@@ -499,7 +499,7 @@ MonoBehaviour:
   _detectRange: 3
   _playerMask:
     serializedVersion: 2
-    m_Bits: 16
+    m_Bits: 64
   _handConnector: {fileID: 1598581607172323560}
 --- !u!135 &8409588565791683227
 SphereCollider:

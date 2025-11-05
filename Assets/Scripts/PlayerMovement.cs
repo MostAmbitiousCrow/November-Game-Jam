@@ -17,11 +17,16 @@ public class PlayerMovement : MonoBehaviour
 
     public float speed;
     public float range;
-    public float power;
+    [SerializeField] float power = 5f;
 
     public bool arrowAppear;
     public LineRenderer arrowRenderer;
     public Material arrowMaterial;
+
+    [Header("Components")]
+    [SerializeField] Hand_Connector _currentHandConnector;
+    [SerializeField] Hand_Connector _thisHandConnector;
+    public Hand_Connector HandConnector { get { return _thisHandConnector; } }
 
     void Start()
     {
@@ -29,7 +34,8 @@ public class PlayerMovement : MonoBehaviour
         arrowRenderer.material = arrowMaterial;
         arrowRenderer.startWidth = 0.5f;
         arrowRenderer.endWidth = 0.1f;
-        
+
+        if (_currentHandConnector) _currentHandConnector.AssignConnectedHand(_thisHandConnector);
     }
     void OnEnable()
     {
@@ -91,11 +97,11 @@ public class PlayerMovement : MonoBehaviour
     {
         //Figures out how far the player needs to move based on the distance between the 2 mouse points
         range = Vector3.Distance(mouseStartPoint, mouseEndPoint);
-        var powerX = moveDirection.x / 200;
-        var powerY = moveDirection.y / 200;
+        var powerX = moveDirection.x / 200f * power;
+        var powerY = moveDirection.y / 200f * power;
         rb.AddForce(powerX, powerY, 0, ForceMode.Impulse);
-        Debug.Log("X =" + powerX);
-        Debug.Log("Y = " + powerY);
+        //Debug.Log("X =" + powerX);
+        //Debug.Log("Y = " + powerY);
 
     }
 

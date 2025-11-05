@@ -40,8 +40,8 @@ public class Friend_Controller : MonoBehaviour
             if (hitColliders[0].CompareTag("Player"))
             {
                 print($"{col.name} Hit");
-                Friend_Follower friendFollower = col.transform.GetComponent<Friend_Follower>();
-                Hand_Connector playerHand = friendFollower.HandConnector;
+                PlayerMovement player = col.transform.GetComponent<PlayerMovement>();
+                Hand_Connector playerHand = player.HandConnector;
                 playerHand.AssignConnectedHand(_handConnector);
 
                 _handConnector.ConnectHand(playerHand);
