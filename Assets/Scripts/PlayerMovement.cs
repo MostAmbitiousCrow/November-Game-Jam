@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -25,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Hand_Connector _currentHandConnector;
     [SerializeField] Hand_Connector _thisHandConnector;
     public Hand_Connector HandConnector { get { return _thisHandConnector; } }
+    [SerializeField] ParticleSystem _jetpackParticles;
 
     void Start()
     {
@@ -130,6 +129,7 @@ public class PlayerMovement : MonoBehaviour
         var powerX = _playerMoveDirection.x * power;
         var powerY = _playerMoveDirection.y * power;
         rb.AddForce(powerX, powerY, 0, ForceMode.Impulse);
+        _jetpackParticles.Emit(10);
         //Debug.Log("X =" + powerX);
         //Debug.Log("Y = " + powerY);
 
