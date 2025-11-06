@@ -156,7 +156,7 @@ public class PlayerMovement : MonoBehaviour
             mousePos.z = Camera.main.farClipPlane * .5f;
             var mousePoint = Camera.main.ScreenToWorldPoint(mousePos);
             _playerArrowRenderer.positionCount = 2;
-            _playerArrowRenderer.SetPosition(0, transform.position);
+            _playerArrowRenderer.SetPosition(0, mouseStartPoint);
             _playerArrowRenderer.SetPosition(1, mousePoint);
         }
         if (_friendArrowActive)
@@ -166,7 +166,7 @@ public class PlayerMovement : MonoBehaviour
             mousePos.z = Camera.main.farClipPlane * .5f;
             var mousePoint = Camera.main.ScreenToWorldPoint(mousePos);
             _friendArrowRenderer.positionCount = 2;
-            _friendArrowRenderer.SetPosition(0, transform.position);
+            _friendArrowRenderer.SetPosition(0, mouseStartPoint);
             _friendArrowRenderer.SetPosition(1, mousePoint);
         }
     }

@@ -659,6 +659,80 @@ CharacterJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!1 &4513016130577653855
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1871257430903579080}
+  - component: {fileID: 7752562400177604104}
+  m_Layer: 6
+  m_Name: Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1871257430903579080
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4513016130577653855}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 530635293339497526}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7752562400177604104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4513016130577653855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7444b0a6e88911f44961f06ff94992ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playInstantly: 1
+  isGroup: 0
+  request: JetPack-6c3e4d92-4a13-49a2-8f73-6ab799b2fad3
+  groupRequest: 
+  editModuleSettings:
+    list:
+    - key: CarterGames.Assets.AudioManager.LoopEdit, CarterGames.AudioManager.Runtime,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      value:
+        list:
+        - key: showModule
+          value: True
+        - key: enabled
+          value: True
+        - key: moduleMode
+          value: 1
+        - key: loopCount
+          value: 0
+        - key: ignoreDelayAfterFirst
+          value: True
+  showEvents: 0
+  onStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  onLooped:
+    m_PersistentCalls:
+      m_Calls: []
+  onCompleted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5075696507155115857
 GameObject:
   m_ObjectHideFlags: 0
@@ -1554,6 +1628,7 @@ Transform:
   - {fileID: 7954853310862166780}
   - {fileID: 856844996251828024}
   - {fileID: 4459014311340526912}
+  - {fileID: 1871257430903579080}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5716132360448107166

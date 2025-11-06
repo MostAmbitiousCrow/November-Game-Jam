@@ -13,7 +13,223 @@ MonoBehaviour:
   m_Name: '[Audio Manager] Audio Library Asset'
   m_EditorClassIdentifier: 
   library:
-    list: []
+    list:
+    - key: AlienElephant-41f3c901-6b37-4cf2-a68a-56c719d53331
+      value:
+        key: AlienElephant
+        id: AlienElephant-41f3c901-6b37-4cf2-a68a-56c719d53331
+        defaultKey: AlienElephant-41f3c901-6b37-4cf2-a68a-56c719d53331
+        value: {fileID: 8300000, guid: 69579dd75ce8c7d4c9317565f954fd65, type: 3}
+        path: Assets/Audio/Sounds/AnimalSounds/Elephant/AlienElephant.wav
+        dynamicStartTime:
+          time: 0
+          threshold: 0
+          option: 1
+          tabPos: 1
+        defaultSettings:
+          volume: 1
+          pitch: 1
+        showDynamicTime: 0
+        metaData:
+          category: 
+          tags:
+          - Friend Sounds
+    - key: WoodPeckerAlien-2c222630-d768-4a69-a095-61fdebdc90b3
+      value:
+        key: WoodPeckerAlien
+        id: WoodPeckerAlien-2c222630-d768-4a69-a095-61fdebdc90b3
+        defaultKey: WoodPeckerAlien-2c222630-d768-4a69-a095-61fdebdc90b3
+        value: {fileID: 8300000, guid: 1c4ab2bfb8b823a4798d812ab1d900e4, type: 3}
+        path: Assets/Audio/Sounds/AnimalSounds/WoodPecker/WoodPeckerAlien.wav
+        dynamicStartTime:
+          time: 0
+          threshold: 0
+          option: 1
+          tabPos: 1
+        defaultSettings:
+          volume: 1
+          pitch: 1
+        showDynamicTime: 0
+        metaData:
+          category: 
+          tags:
+          - Friend Sounds
+    - key: WoodPeckerAlien2-9d1b416f-97ea-469c-a53f-381c6cc8f9d1
+      value:
+        key: WoodPeckerAlien2
+        id: WoodPeckerAlien2-9d1b416f-97ea-469c-a53f-381c6cc8f9d1
+        defaultKey: WoodPeckerAlien2-9d1b416f-97ea-469c-a53f-381c6cc8f9d1
+        value: {fileID: 8300000, guid: 1cb8a95ba17ae18489fb5de523966e19, type: 3}
+        path: Assets/Audio/Sounds/AnimalSounds/WoodPecker/WoodPeckerAlien2.wav
+        dynamicStartTime:
+          time: 0
+          threshold: 0
+          option: 1
+          tabPos: 1
+        defaultSettings:
+          volume: 1
+          pitch: 1
+        showDynamicTime: 0
+        metaData:
+          category: 
+          tags:
+          - Friend Sounds
+    - key: WoodPeckerPecking-bf42c564-a7dd-4797-8988-c81d9ec0d646
+      value:
+        key: WoodPeckerPecking
+        id: WoodPeckerPecking-bf42c564-a7dd-4797-8988-c81d9ec0d646
+        defaultKey: WoodPeckerPecking-bf42c564-a7dd-4797-8988-c81d9ec0d646
+        value: {fileID: 8300000, guid: d4d05178cad2dd1458111975771b1afd, type: 3}
+        path: Assets/Audio/Sounds/AnimalSounds/WoodPecker/WoodPeckerPecking.wav
+        dynamicStartTime:
+          time: 0
+          threshold: 0
+          option: 1
+          tabPos: 1
+        defaultSettings:
+          volume: 1
+          pitch: 1
+        showDynamicTime: 0
+        metaData:
+          category: 
+          tags:
+          - Friend Sounds
+    - key: JetPack-6c3e4d92-4a13-49a2-8f73-6ab799b2fad3
+      value:
+        key: JetPack
+        id: JetPack-6c3e4d92-4a13-49a2-8f73-6ab799b2fad3
+        defaultKey: JetPack-6c3e4d92-4a13-49a2-8f73-6ab799b2fad3
+        value: {fileID: 8300000, guid: 14d6acdce41eb5f4bb3f7dbaec7d17c7, type: 3}
+        path: Assets/Audio/Sounds/JetPack/JetPack.wav
+        dynamicStartTime:
+          time: 0
+          threshold: 0
+          option: 1
+          tabPos: 1
+        defaultSettings:
+          volume: 1
+          pitch: 1
+        showDynamicTime: 0
+        metaData:
+          category: 
+          tags:
+          - Player Sounds
+    - key: CrystalHit-bb8f71ea-5923-4d4a-a4d3-8a07eeeb7bdd
+      value:
+        key: CrystalHit
+        id: CrystalHit-bb8f71ea-5923-4d4a-a4d3-8a07eeeb7bdd
+        defaultKey: CrystalHit-bb8f71ea-5923-4d4a-a4d3-8a07eeeb7bdd
+        value: {fileID: 8300000, guid: 2a60991a12623e34787cf4f8e439cba6, type: 3}
+        path: Assets/Audio/Sounds/Objects/CrystalHit.wav
+        dynamicStartTime:
+          time: 0.092
+          threshold: 0
+          option: 1
+          tabPos: 1
+        defaultSettings:
+          volume: 1
+          pitch: 1
+        showDynamicTime: 0
+        metaData:
+          category: 
+          tags:
+          - Obstacle Sounds
+    - key: PlayerSquish_01-9eab01c5-7888-4545-9b1d-9d722f79a5c0
+      value:
+        key: PlayerSquish_01
+        id: PlayerSquish_01-9eab01c5-7888-4545-9b1d-9d722f79a5c0
+        defaultKey: PlayerSquish_01-9eab01c5-7888-4545-9b1d-9d722f79a5c0
+        value: {fileID: 8300000, guid: c742c78740025e54ca7ea8176a94b508, type: 3}
+        path: Assets/Audio/Sounds/Player/PlayerSquish_01.wav
+        dynamicStartTime:
+          time: 0
+          threshold: 0
+          option: 0
+          tabPos: 1
+        defaultSettings:
+          volume: 1
+          pitch: 1
+        showDynamicTime: 0
+        metaData:
+          category: 
+          tags:
+          - Player Sounds
+    - key: SheepNoise-62616416-af44-46c7-bdf0-d18a6d6335fe
+      value:
+        key: SheepNoise
+        id: SheepNoise-62616416-af44-46c7-bdf0-d18a6d6335fe
+        defaultKey: SheepNoise-62616416-af44-46c7-bdf0-d18a6d6335fe
+        value: {fileID: 8300000, guid: f847c6c644b60a04b9832b25c5573b01, type: 3}
+        path: Assets/Audio/Sounds/AnimalSounds/Sheep/SheepNoise.wav
+        dynamicStartTime:
+          time: 0.292
+          threshold: 0
+          option: 1
+          tabPos: 1
+        defaultSettings:
+          volume: 1
+          pitch: 1
+        showDynamicTime: 0
+        metaData:
+          category: 
+          tags: []
+    - key: CrystalSoundwav-719de198-4b27-4c14-aa5f-bce2ab54b8f6
+      value:
+        key: CrystalSoundwav
+        id: CrystalSoundwav-719de198-4b27-4c14-aa5f-bce2ab54b8f6
+        defaultKey: CrystalSoundwav-719de198-4b27-4c14-aa5f-bce2ab54b8f6
+        value: {fileID: 8300000, guid: 9dd66c6b6e5db0a449020fd59760fc21, type: 3}
+        path: Assets/Audio/Sounds/Objects/CrystalSoundwav.wav
+        dynamicStartTime:
+          time: 0.122
+          threshold: 0
+          option: 1
+          tabPos: 1
+        defaultSettings:
+          volume: 1
+          pitch: 1
+        showDynamicTime: 0
+        metaData:
+          category: 
+          tags: []
+    - key: TreeBreaking-0708f49f-a5b9-4f8a-a5e7-daf0d43816d3
+      value:
+        key: TreeBreaking
+        id: TreeBreaking-0708f49f-a5b9-4f8a-a5e7-daf0d43816d3
+        defaultKey: TreeBreaking-0708f49f-a5b9-4f8a-a5e7-daf0d43816d3
+        value: {fileID: 8300000, guid: 5ad1ed04609b2cc44895b6018b880f63, type: 3}
+        path: Assets/Audio/Sounds/Objects/TreeBreaking.wav
+        dynamicStartTime:
+          time: 0
+          threshold: 0
+          option: 1
+          tabPos: 1
+        defaultSettings:
+          volume: 1
+          pitch: 1
+        showDynamicTime: 0
+        metaData:
+          category: 
+          tags: []
+    - key: FriendConnectSound-fb826aea-5984-470a-820e-45b692f1bdee
+      value:
+        key: FriendConnectSound
+        id: FriendConnectSound-fb826aea-5984-470a-820e-45b692f1bdee
+        defaultKey: FriendConnectSound-fb826aea-5984-470a-820e-45b692f1bdee
+        value: {fileID: 8300000, guid: 37e2a76cb7e2d924eb9e382ecf99a7bd, type: 3}
+        path: Assets/Audio/Sounds/Player/FriendConnectSound.wav
+        dynamicStartTime:
+          time: 0.445
+          threshold: 0
+          option: 1
+          tabPos: 1
+        defaultSettings:
+          volume: 1
+          pitch: 1
+        showDynamicTime: 0
+        metaData:
+          category: 
+          tags: []
   groups:
     list: []
   mixers:
@@ -31,4 +247,9 @@ MonoBehaviour:
         path: Assets/Audio/AudioMixer.mixer
         mixerGroup: {fileID: -4275755406688029215, guid: eb22f722c2147b14ea522ab51977e6a2, type: 2}
   categories: []
-  tags: []
+  tags:
+  - Friend Sounds
+  - Music Sounds
+  - Player Sounds
+  - Enviroment Sounds
+  - Obstacle Sounds
