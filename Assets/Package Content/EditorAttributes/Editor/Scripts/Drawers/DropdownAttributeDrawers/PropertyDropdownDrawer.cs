@@ -1,8 +1,10 @@
 using System;
 using UnityEngine;
 using UnityEditor;
+using System.Reflection;
 using UnityEngine.UIElements;
 using UnityEditor.UIElements;
+using System.Collections.Generic;
 using EditorAttributes.Editor.Utility;
 
 namespace EditorAttributes.Editor
@@ -16,7 +18,7 @@ namespace EditorAttributes.Editor
 
 			var root = new VisualElement();
 			var propertyField = CreatePropertyField(property);
-			var errorBox = new HelpBox("The PropertyDropdown Attribute can only be attached on to <b>UnityEngine.Object</b> types", HelpBoxMessageType.Error);
+			var errorBox = new HelpBox("The PropertyDropdown Attribute can only be attached to objects deriving from Component or ScriptableObject", HelpBoxMessageType.Error);
 
 			ApplyBoxStyle(root);
 
@@ -58,7 +60,22 @@ namespace EditorAttributes.Editor
 				return;
 			}
 
-			root.Add(CreatePropertyFoldout(new SerializedObject(property.objectReferenceValue), property));
+			if (IsFieldOfType(fieldType, typeof(Component)))
+			{
+				var component = property.objectReferenceValue as Component;
+
+				root.Add(CreatePropertyFoldout(new SerializedObject(component), property));
+			}
+			else if (IsFieldOfType(fieldType, typeof(ScriptableObject)))
+			{
+				var scriptableObject = property.objectReferenceValue as ScriptableObject;
+
+				root.Add(CreatePropertyFoldout(new SerializedObject(scriptableObject), property));
+			}
+			else
+			{
+				root.Add(errorBox);
+			}
 		}
 
 		private Foldout CreatePropertyFoldout(SerializedObject serializedObject, SerializedProperty serializedProperty)
@@ -73,29 +90,64 @@ namespace EditorAttributes.Editor
 
 			ApplyBoxStyle(foldout);
 
+			foldout.style.unityFontStyleAndWeight = FontStyle.Bold;
 			foldout.style.paddingLeft = 15f;
 
-			foldout.Add(new InspectorElement(serializedObject));
+			using (var property = serializedObject.GetIterator())
+			{
+				if (property.NextVisible(true))
+				{
+					do
+					{
+						if (property.name.Equals("m_Script", StringComparison.Ordinal)) // Exclude the field containing the script reference
+							continue;
+
+						var field = ReflectionUtility.FindField(property.name, property.serializedObject.targetObject);
+
+						if (field?.GetCustomAttribute<HidePropertyAttribute>() != null) // Skip fields with the HideProperty attribute
+							continue;
+
+						var propertyField = CreatePropertyField(property);
+
+						propertyField.style.unityFontStyleAndWeight = FontStyle.Normal;
+
+						foldout.Add(propertyField);
+					}
+					while (property.NextVisible(false));
+				}
+			}
 
 			serializedObject.ApplyModifiedProperties();
 
 			foldout.RegisterValueChangedCallback((callback) => EditorPrefs.SetBool(foldoutSaveKey, callback.newValue));
-
-			ExecuteLater(foldout, () =>
-			{
-				foldout.Q<Label>(className: Foldout.textUssClassName).style.unityFontStyleAndWeight = FontStyle.Bold;
-				foldout.Q<ObjectField>("unity-input-m_Script")?.parent.RemoveFromHierarchy();
-			});
 
 			return foldout;
 		}
 
 		private Type GetValidPropertyType(SerializedProperty property)
 		{
-			var validProperty = IsPropertyCollection(property) ? GetCollectionProperty(property) : property;
+			var validProperty = ReflectionUtility.IsPropertyCollection(property) ? GetCollectionProperty(property) : property;
 			var memberInfo = ReflectionUtility.GetValidMemberInfo(validProperty.name, validProperty);
 
 			return ReflectionUtility.GetMemberInfoType(memberInfo);
+		}
+
+		private bool IsFieldOfType(Type fieldType, Type typeToCheck)
+		{
+			if (fieldType.IsArray)
+			{
+				return fieldType.IsSubclassOf(typeToCheck.MakeArrayType()) || fieldType == typeToCheck.MakeArrayType();
+			}
+			else if (fieldType.IsGenericType && fieldType.GetGenericTypeDefinition() == typeof(List<>))
+			{
+				var genericType = fieldType.GetGenericArguments()[0];
+
+				return genericType.IsSubclassOf(typeToCheck) || genericType == typeToCheck;
+			}
+			else
+			{
+				return fieldType.IsSubclassOf(typeToCheck) || fieldType == typeToCheck;
+			}
 		}
 	}
 }

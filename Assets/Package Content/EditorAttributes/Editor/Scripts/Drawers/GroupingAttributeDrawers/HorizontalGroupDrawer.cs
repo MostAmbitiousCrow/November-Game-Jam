@@ -1,4 +1,3 @@
-using UnityEngine;
 using UnityEditor;
 using System.Reflection;
 using UnityEngine.UIElements;
@@ -7,8 +6,8 @@ using EditorAttributes.Editor.Utility;
 namespace EditorAttributes.Editor
 {
 	[CustomPropertyDrawer(typeof(HorizontalGroupAttribute))]
-	public class HorizontalGroupDrawer : PropertyDrawerBase
-	{
+    public class HorizontalGroupDrawer : PropertyDrawerBase
+    {
 		public override VisualElement CreatePropertyGUI(SerializedProperty property)
 		{
 			var horizontalGroup = attribute as HorizontalGroupAttribute;
@@ -18,54 +17,32 @@ namespace EditorAttributes.Editor
 				ApplyBoxStyle(root);
 
 			root.style.flexDirection = FlexDirection.Row;
-			root.style.alignItems = Align.FlexStart;
 
 			foreach (string variableName in horizontalGroup.FieldsToGroup)
 			{
-				var errorBox = new HelpBox();
-				var groupBox = new VisualElement()
-				{
-					style = {
-						flexDirection = FlexDirection.Row,
-						flexGrow = 1f,
-						flexBasis = 0.1f,
-						alignItems = Align.Center
-					}
-				};
-
-				// Add space between properties excluding the last property
-				if (ArrayUtility.LastIndexOf(horizontalGroup.FieldsToGroup, variableName) != horizontalGroup.FieldsToGroup.Length - 1)
-					groupBox.style.marginRight = horizontalGroup.PropertySpace;
-
 				var variableProperty = FindNestedProperty(property, GetSerializedPropertyName(variableName, property));
-				var memberInfo = ReflectionUtility.GetValidMemberInfo(variableName, property);
 
-				var propertyField = CreateField(variableName, variableProperty);
-
-				if (variableProperty == null)
+				if (variableProperty != null)
 				{
-					groupBox.Add(propertyField);
-					root.Add(groupBox);
+					var errorBox = new HelpBox();
+					var groupBox = new VisualElement() 
+					{
+						style = {
+							flexDirection = FlexDirection.Row,
+							flexGrow = 1f,
+							flexBasis = 0.1f,
+							alignItems = Align.Center							
+						}
+					};
 
-					continue;
-				}
+					var fieldInfo = ReflectionUtility.GetValidMemberInfo(variableProperty.name, property) as FieldInfo;
+					var renameAttribute = fieldInfo?.GetCustomAttribute<RenameAttribute>();
 
-				var hideLabelAttribute = memberInfo?.GetCustomAttribute<HideLabelAttribute>();
-
-				propertyField.style.flexGrow = 1f;
-				propertyField.style.flexBasis = 0.1f;
-				groupBox.style.paddingLeft = 20f;
-
-				if (hideLabelAttribute == null)
-				{
-					var renameAttribute = memberInfo?.GetCustomAttribute<RenameAttribute>();
-					var tooltipAttribute = memberInfo?.GetCustomAttribute<TooltipAttribute>();
-
-					string labelText = renameAttribute == null ? ObjectNames.NicifyVariableName(variableName) : RenameDrawer.GetNewName(renameAttribute, property, errorBox);
+					string labelText = renameAttribute == null ? variableProperty.displayName : RenameDrawer.GetNewName(renameAttribute, variableProperty, errorBox);
 
 					var label = new Label(labelText)
 					{
-						tooltip = tooltipAttribute?.tooltip,
+						tooltip = variableProperty.tooltip,
 						style = {
 							flexGrow = 1f,
 							flexBasis = 0.1f,
@@ -73,9 +50,17 @@ namespace EditorAttributes.Editor
 						}
 					};
 
-					// Serialized objects and Vector 4 are displayed with foldouts and don't need the custom label
-					if (variableProperty.propertyType is not SerializedPropertyType.Generic and not SerializedPropertyType.Vector4)
+					var propertyField = DrawProperty(variableProperty);
+
+					propertyField.style.flexGrow = 1f;
+					propertyField.style.flexBasis = 0.1f;
+					groupBox.style.paddingLeft = 20f;
+
+					if (variableProperty.propertyType != SerializedPropertyType.Generic) // Do not add labels to serialized objects else it will show twice
 						groupBox.Add(label);
+
+					groupBox.Add(propertyField);
+					root.Add(groupBox);
 
 					if (renameAttribute != null)
 					{
@@ -86,70 +71,31 @@ namespace EditorAttributes.Editor
 						});
 					}
 				}
-
-				groupBox.Add(propertyField);
-				root.Add(groupBox);
+				else
+				{
+					root.Add(new HelpBox($"{variableName} is not a valid field", HelpBoxMessageType.Error));
+					break;
+				}
 			}
 
 			return root;
 		}
 
-		private VisualElement CreateField(string variableName, SerializedProperty variableProperty)
+		private VisualElement DrawProperty(SerializedProperty property)
 		{
-			VisualElement field;
+			var propertyField = CreatePropertyField(property);
 
-			if (variableProperty == null)
-				return new HelpBox($"<b>{variableName}</b> is not a valid field or property", HelpBoxMessageType.Error);
-
-			field = CreatePropertyField(variableProperty);
-
-			field.RegisterCallback<GeometryChangedEvent>(OnGeometryChanged);
-
-			void OnGeometryChanged(GeometryChangedEvent changeEvent)
+			if (property.propertyType != SerializedPropertyType.Generic)
 			{
-				// Force update this logic to make sure fields are visible
-				UpdateVisualElement(field, () =>
+				ExecuteLater(propertyField, () =>
 				{
-					var hiddenField = field.Q<VisualElement>(HidePropertyDrawer.HIDDEN_PROPERTY_ID);
+					var propertyLabel = propertyField.Q<Label>();
 
-					if (hiddenField != null)
-					{
-						hiddenField.name = GROUPED_PROPERTY_ID;
-						hiddenField.style.display = DisplayStyle.Flex;
-					}
-
-					if (variableProperty.propertyType is not SerializedPropertyType.Generic and not SerializedPropertyType.Vector4)
-					{
-						var propertyLabel = field.Q<Label>();
-
-						if (propertyLabel != null)
-						{
-							if (!propertyLabel.parent.ClassListContains(BaseCompositeField<Void, IntegerField, int>.fieldUssClassName)) // Do not remove the label from composite fields
-								propertyLabel.RemoveFromHierarchy();
-						}
-					}
-					else
-					{
-						var alignedFields = field.Query<VisualElement>(className: BaseField<Void>.alignedFieldUssClassName).ToList();
-
-						// Fix alignment issues with fields inside foldouts
-						foreach (var alignedField in alignedFields)
-						{
-							alignedField.RemoveFromClassList(BaseField<Void>.alignedFieldUssClassName);
-
-							var alignedFieldLabel = alignedField.Q<Label>();
-
-							alignedFieldLabel.style.width = 0f;
-							alignedFieldLabel.style.minWidth = 80f;
-							alignedFieldLabel.style.marginRight = (attribute as HorizontalGroupAttribute).WidthOffset;
-						}
-					}
-				}, 100L);
-
-				field.UnregisterCallback<GeometryChangedEvent>(OnGeometryChanged);
+					propertyLabel?.RemoveFromHierarchy();
+				});
 			}
 
-			return field;
+			return propertyField;
 		}
 	}
 }

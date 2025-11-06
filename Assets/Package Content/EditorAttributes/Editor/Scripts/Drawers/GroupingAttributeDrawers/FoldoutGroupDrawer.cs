@@ -1,6 +1,7 @@
-using UnityEditor;
 using UnityEngine;
+using UnityEditor;
 using UnityEngine.UIElements;
+using EditorAttributes.Editor.Utility;
 
 namespace EditorAttributes.Editor
 {
@@ -27,9 +28,33 @@ namespace EditorAttributes.Editor
 
 			foreach (string variableName in foldoutGroup.FieldsToGroup)
 			{
-				var propertyField = CreateField(variableName, property, root);
+				var variableProperty = FindNestedProperty(property, GetSerializedPropertyName(variableName, property));
 
-				foldout.Add(propertyField);
+				if (variableProperty != null)
+				{
+					var propertyField = CreatePropertyField(variableProperty);
+
+					// Slightly move foldouts for serialized objects
+					if (variableProperty.propertyType == SerializedPropertyType.Generic && variableProperty.type != "UnityEvent" && !ReflectionUtility.IsPropertyCollection(variableProperty))
+						propertyField.style.marginLeft = 10f;
+
+					propertyField.style.unityFontStyleAndWeight = FontStyle.Normal;
+
+					foldout.Add(propertyField);
+
+					ExecuteLater(propertyField, () =>
+					{
+						var label = propertyField.Q<Label>();
+
+						if (label != null)
+							label.style.marginRight = foldoutGroup.WidthOffset;
+					});
+				}
+				else
+				{
+					foldout.Add(new HelpBox($"{variableName} is not a valid field", HelpBoxMessageType.Error));
+					break;
+				}
 			}
 
 			root.Add(foldout);
@@ -45,45 +70,6 @@ namespace EditorAttributes.Editor
 			});
 
 			return root;
-		}
-
-		private VisualElement CreateField(string variableName, SerializedProperty property, VisualElement root)
-		{
-			VisualElement field;
-
-			var variableProperty = FindNestedProperty(property, GetSerializedPropertyName(variableName, property));
-
-			if (variableProperty == null)
-				return new HelpBox($"<b>{variableName}</b> is not a valid field or property", HelpBoxMessageType.Error);
-
-			field = CreatePropertyField(variableProperty);
-
-			field.style.unityFontStyleAndWeight = FontStyle.Normal;
-
-			// Slightly move foldouts for serialized objects
-			if (variableProperty.propertyType == SerializedPropertyType.Generic && variableProperty.type != "UnityEvent" && !IsPropertyCollection(variableProperty))
-				field.style.marginLeft = 10f;
-
-			root.RegisterCallback<GeometryChangedEvent>(OnGeometryChanged);
-
-			void OnGeometryChanged(GeometryChangedEvent changeEvent)
-			{
-				// Force update this logic to make sure fields are visible
-				UpdateVisualElement(field, () =>
-				{
-					var hiddenField = field.Q<VisualElement>(HidePropertyDrawer.HIDDEN_PROPERTY_ID);
-
-					if (hiddenField != null)
-					{
-						hiddenField.name = GROUPED_PROPERTY_ID;
-						hiddenField.style.display = DisplayStyle.Flex;
-					}
-				}, 100L);
-
-				root.UnregisterCallback<GeometryChangedEvent>(OnGeometryChanged);
-			}
-
-			return field;
 		}
 	}
 }

@@ -1,15 +1,14 @@
-using System.Collections.Generic;
-using UnityEditor;
-using UnityEditor.UIElements;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEditor;
 using UnityEngine.UIElements;
+using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 namespace EditorAttributes.Editor
 {
 	[CustomPropertyDrawer(typeof(SceneDropdownAttribute))]
-	public class SceneDropdownDrawer : PropertyDrawerBase
-	{
+    public class SceneDropdownDrawer : PropertyDrawerBase
+    {
 		public override VisualElement CreatePropertyGUI(SerializedProperty property)
 		{
 			var root = new VisualElement();
@@ -19,7 +18,7 @@ namespace EditorAttributes.Editor
 			{
 				var sceneNames = GetSceneNames(errorBox);
 
-				var dropdownField = IsCollectionValid(sceneNames) ? new DropdownField(property.displayName, sceneNames, GetDropdownDefaultValue(sceneNames, property))
+				var dropdownField = IsCollectionValid(sceneNames) ? new DropdownField(property.displayName, sceneNames, GetDropdownDefaultValue(sceneNames, property)) 
 					: new DropdownField(property.displayName, new List<string>() { "NULL" }, 0);
 
 				dropdownField.tooltip = property.tooltip;
@@ -36,20 +35,6 @@ namespace EditorAttributes.Editor
 
 				root.Add(dropdownField);
 				DisplayErrorBox(root, errorBox);
-
-				dropdownField.TrackPropertyValue(property, (trackedProperty) =>
-				{
-					string sceneName = trackedProperty.propertyType == SerializedPropertyType.Integer ? SceneNameFromIndex(trackedProperty.intValue) : trackedProperty.stringValue;
-
-					if (dropdownField.choices.Contains(sceneName))
-					{
-						dropdownField.SetValueWithoutNotify(sceneName);
-					}
-					else
-					{
-						Debug.LogWarning($"The value <b>{trackedProperty.boxedValue}</b> set to the <b>{trackedProperty.name}</b> variable is not a valid scene identifier.", trackedProperty.serializedObject.targetObject);
-					}
-				});
 
 				ExecuteLater(dropdownField, () => dropdownField.Q(className: DropdownField.inputUssClassName).style.backgroundColor = EditorExtension.GLOBAL_COLOR / 2f);
 
@@ -76,7 +61,16 @@ namespace EditorAttributes.Editor
 		{
 			var dropdown = element as DropdownField;
 
-			string sceneName = int.TryParse(clipboardValue, out int sceneIndex) ? SceneNameFromIndex(sceneIndex) : clipboardValue;
+			string sceneName;
+
+			if (int.TryParse(clipboardValue, out int sceneIndex))
+			{
+				sceneName = SceneNameFromIndex(sceneIndex);
+			}
+			else
+			{
+				sceneName = clipboardValue;
+			}
 
 			if (dropdown.choices.Contains(sceneName))
 			{
@@ -89,21 +83,21 @@ namespace EditorAttributes.Editor
 		}
 
 		private List<string> GetSceneNames(HelpBox errorBox)
-		{
+        {
 			var sceneList = new List<string>();
-			var activeSceneList = EditorBuildSettingsScene.GetActiveSceneList(EditorBuildSettings.scenes);
+            var activeSceneList = EditorBuildSettingsScene.GetActiveSceneList(EditorBuildSettings.scenes);
 
-			if (activeSceneList == null || activeSceneList.Length == 0)
-			{
-				errorBox.text = "There are no scenes in the active build settings";
-				return sceneList;
-			}
+            if (activeSceneList == null || activeSceneList.Length == 0)
+            {
+				errorBox.text = "There are no scenes in the build settings";
+                return sceneList;
+            }
 
 			foreach (var scene in activeSceneList)
 			{
-				var sceneName = scene.Split('/')[^1].Split('.')[0]; // Remove the asset paths and file extension from the name
+			    var sceneName = scene.Split('/')[^1].Split('.')[0]; // Remove the asset paths and file extension from the name
 
-				sceneList.Add(sceneName);
+			    sceneList.Add(sceneName);
 			}
 
 			return sceneList;

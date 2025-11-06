@@ -1,8 +1,8 @@
 using System;
 using System.IO;
-using System.Linq;
-using UnityEditor;
 using UnityEngine;
+using UnityEditor;
+using System.Linq;
 using System.Reflection;
 using UnityEngine.UIElements;
 using UnityEditor.UIElements;
@@ -27,15 +27,7 @@ namespace EditorAttributes.Editor
 
 		protected virtual void OnEnable()
 		{
-			var funcList = new List<MethodInfo>();
-			var targetType = target.GetType();
-			while (targetType != null)
-			{
-				funcList.AddRange(targetType.GetMethods(ReflectionUtility.BINDING_FLAGS));
-				targetType = targetType.BaseType;
-			}
-
-			functions = funcList.ToArray();
+			functions = target.GetType().GetMethods(ReflectionUtility.BINDING_FLAGS);
 
 			ButtonDrawer.LoadParamsData(functions, target, ref buttonFoldouts, ref buttonParameterValues);
 
@@ -67,7 +59,7 @@ namespace EditorAttributes.Editor
 
 			var root = new VisualElement();
 
-			var nonSerializedMembers = DrawNonSerializedMembers();
+			var nonSerializedMembers = DrawNonSerilizedMembers();
 			var defaultInspector = DrawDefaultInspector();
 			var buttons = DrawButtons();
 
@@ -104,7 +96,7 @@ namespace EditorAttributes.Editor
 						var field = ReflectionUtility.FindField(property.name, target);
 
 						if (field?.GetCustomAttribute<HidePropertyAttribute>() != null)
-							propertyField.style.display = DisplayStyle.None;
+							continue;
 
 						var colorAttribute = field?.GetCustomAttribute<GUIColorAttribute>();
 
@@ -146,7 +138,7 @@ namespace EditorAttributes.Editor
 		/// Draws all the members marked with the ShowInInspector attribute
 		/// </summary>
 		/// <returns>A visual element containing all non serialized member fields</returns>
-		protected VisualElement DrawNonSerializedMembers()
+		protected VisualElement DrawNonSerilizedMembers()
 		{
 			var root = new VisualElement();
 
@@ -207,6 +199,9 @@ namespace EditorAttributes.Editor
 		private VisualElement DrawNonSerializedField(MemberInfo memberInfo, Type memberType, object memberValue)
 		{
 			var root = new VisualElement();
+
+			var headerAttribute = memberInfo.GetCustomAttribute<HeaderAttribute>();
+
 			var header = new Label()
 			{
 				style = {
@@ -223,16 +218,7 @@ namespace EditorAttributes.Editor
 			var field = PropertyDrawerBase.CreateFieldForType(memberType, memberInfo.Name, memberValue, AreNonSerializedMemberValuesDifferent(memberInfo, targets));
 
 			field.AddToClassList(BaseField<Void>.alignedFieldUssClassName);
-
-			if (field is Foldout)
-			{
-				field.contentContainer.SetEnabled(false);
-				field.Q<Label>().SetEnabled(false);
-			}
-			else
-			{
-				field.SetEnabled(false);
-			}
+			field.SetEnabled(false);
 
 			PropertyDrawerBase.BindFieldToMember(memberType, field, memberInfo, target);
 
@@ -245,8 +231,6 @@ namespace EditorAttributes.Editor
 				space.AddToClassList("unity-space-drawer");
 				root.Add(space);
 			}
-
-			var headerAttribute = memberInfo.GetCustomAttribute<HeaderAttribute>();
 
 			if (headerAttribute != null)
 			{
@@ -285,7 +269,7 @@ namespace EditorAttributes.Editor
 				return true;
 			}
 
-			if (memberInfo.GetCustomAttribute<SerializeField>() != null || memberInfo.GetCustomAttribute<SerializeReference>() != null)
+			if (memberInfo.GetCustomAttribute<SerializeField>() != null)
 			{
 				errorMessage = $"The member <b>{memberInfo.Name}</b> is already serialized, there is no need to use the ShowInInspector Attribute";
 				return true;

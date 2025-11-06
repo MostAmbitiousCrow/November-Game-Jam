@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace EditorAttributes
@@ -6,16 +5,15 @@ namespace EditorAttributes
 	/// <summary>
 	/// Attribute to add a button next to a property
 	/// </summary>
-	[AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = true)]
 	public class InlineButtonAttribute : PropertyAttribute, IRepetableButton
-	{
-		public string FunctionName { get; private set; }
-		public string ButtonLabel { get; private set; }
-		public float ButtonWidth { get; private set; }
+    {
+	    public string FunctionName { get; private set; }
+        public string ButtonLabel { get; private set; }
+        public float ButtonWidth { get; private set; }
 
-		public bool IsRepetable { get; private set; }
-		public long PressDelay { get; private set; }
-		public long RepetitionInterval { get; private set; }
+        public bool IsRepetable { get; private set; }
+        public long PressDelay { get; private set; }
+        public long RepetitionInterval { get; private set; }
 
 		/// <summary>
 		/// Attribute to add a button next to a property
@@ -24,11 +22,11 @@ namespace EditorAttributes
 		/// <param name="buttonLabel">The label displayed on the button</param>
 		/// <param name="buttonWidth">The width of the button in pixels</param>
 		public InlineButtonAttribute(string functionName, string buttonLabel = "", float buttonWidth = 100f)
-		{
-			FunctionName = functionName;
-			ButtonLabel = buttonLabel;
-			ButtonWidth = buttonWidth;
-		}
+        {
+            FunctionName = functionName;
+            ButtonLabel = buttonLabel;
+            ButtonWidth = buttonWidth;
+        }
 
 		/// <summary>
 		/// Attribute to add a button next to a property
