@@ -1,3 +1,4 @@
+using CarterGames.Assets.AudioManager;
 using UnityEngine;
 using UnityEngine.XR;
 
@@ -22,6 +23,10 @@ public class Hand_Connector : MonoBehaviour
 
     [Header("Stats")]
     [SerializeField] float _connectDistance = .05f;
+    [SerializeField] float _speed = 10f;
+
+    [Header("Audio")]
+    [SerializeField] InspectorAudioClipPlayer _connectSound;
 
     private void Start()
     {
@@ -40,11 +45,16 @@ public class Hand_Connector : MonoBehaviour
 
     void MoveJoint(Rigidbody rb, Rigidbody targetRb)
     {
-        float d = Vector3.Distance(rb.position, targetRb.position);
-        if (d > _connectDistance)
-            rb.MovePosition(targetRb.position);
+        Vector3 targetPosition = targetRb.position;
 
-        //print($"{transform.root.name} Distance = {d} to {_rightConnection.transform.root.name}");
+        // Follow Target
+        Vector3 newPosition = Vector3.Lerp(rb.position, targetPosition, _speed * Time.fixedDeltaTime);
+        rb.MovePosition(newPosition);
+
+        // Follow rotation
+        Quaternion targetRotation = targetRb.rotation;
+        Quaternion newRotation = Quaternion.Slerp(rb.rotation, targetRotation, _speed * Time.fixedDeltaTime);
+        rb.MoveRotation(newRotation);
     }
 
     /// <summary>
@@ -65,6 +75,8 @@ public class Hand_Connector : MonoBehaviour
         _rightConnection = hand;
 
         _connectedRightHandRb = hand._rightHandRb;
+
+        _connectSound.Play();
     }
 
     /// <summary>

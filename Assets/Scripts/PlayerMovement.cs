@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using CarterGames.Assets.AudioManager;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -25,7 +26,12 @@ public class PlayerMovement : MonoBehaviour
     public Hand_Connector HandConnector { get { return _thisHandConnector; } }
     [SerializeField] ParticleSystem _jetpackParticles;
 
+<<<<<<< HEAD
     public Menu_Manager_Pause pauseMenu;
+=======
+    [Header("Audio")]
+    [SerializeField] InspectorAudioClipPlayer _projectSound;
+>>>>>>> Envelope
 
     void Start()
     {
@@ -88,7 +94,7 @@ public class PlayerMovement : MonoBehaviour
         if (!Friend_Chain_Controller.instance.FriendCheck())
             return;
 
-        Friend_Controller selectedFriend = Friend_Chain_Controller.instance.GetCurrentFriend();
+        Character_Controller_Script selectedFriend = Friend_Chain_Controller.instance.GetCurrentFriend();
 
         //Reads whether the LMB is being pressed
         float moveInput = context.ReadValue<float>();
@@ -132,11 +138,10 @@ public class PlayerMovement : MonoBehaviour
         var powerY = _playerMoveDirection.y * power;
         rb.AddForce(powerX, powerY, 0, ForceMode.Impulse);
         _jetpackParticles.Emit(10);
-        //Debug.Log("X =" + powerX);
-        //Debug.Log("Y = " + powerY);
 
+        _projectSound.Play();
     }
-    public void FriendPowerCalcAndMove(Friend_Controller selectedFriend)
+    public void FriendPowerCalcAndMove(Character_Controller_Script selectedFriend)
     {
         //Figures out how far the player needs to move based on the distance between the 2 mouse points
         range = Vector3.Distance(mouseStartPoint, mouseEndPoint);
@@ -144,9 +149,8 @@ public class PlayerMovement : MonoBehaviour
         var powerY = _friendMovedirection.y * power;
         selectedFriend.Rb.AddForce(powerX, powerY, 0, ForceMode.Impulse);
         selectedFriend.OnThrown();
-        //Debug.Log("X =" + powerX);
-        //Debug.Log("Y = " + powerY);
 
+        //_projectSound.Play();
     }
 
     void Update()
