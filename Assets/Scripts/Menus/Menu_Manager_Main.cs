@@ -1,5 +1,6 @@
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Menu_Manager_Main : Menu_Manager
 {
@@ -68,6 +69,7 @@ public class Menu_Manager_Main : Menu_Manager
         ToggleInput(false);
 
         // Load the main game scene or trigger your scene load transition here
+        SceneManager.LoadScene("Level-1");
     }
     #endregion
 }
