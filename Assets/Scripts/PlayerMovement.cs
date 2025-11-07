@@ -25,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
     public Hand_Connector HandConnector { get { return _thisHandConnector; } }
     [SerializeField] ParticleSystem _jetpackParticles;
 
+    public Menu_Manager_Pause pauseMenu;
+
     void Start()
     {
         if (_currentHandConnector) _currentHandConnector.AssignConnectedHand(_thisHandConnector);
@@ -172,7 +174,7 @@ public class PlayerMovement : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            
+            pauseMenu.ShowPauseMenu();
         }
     }
    

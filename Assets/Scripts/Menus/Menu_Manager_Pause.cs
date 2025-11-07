@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Menu_Manager_Pause : Menu_Manager
 {
+    public GameObject playerGO;
     private void Start()
     {
         foreach (var item in screenDatas)
@@ -63,15 +64,17 @@ public class Menu_Manager_Pause : Menu_Manager
         print("Quit to Menu...");
     }
 
-    void ShowPauseMenu()
+    public void ShowPauseMenu()
     {
         _canvas.gameObject.SetActive(true);
+        playerGO.SetActive(false);
         
     }
 
     void ClosePauseMenu()
     {
         _canvas.gameObject.SetActive(false);
+        playerGO.SetActive(true);
     }
 
     protected override void ToggleScreen(int openingScreen, int closingScreen)
