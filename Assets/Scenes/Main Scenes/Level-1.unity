@@ -3929,6 +3929,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 908281941}
     m_Modifications:
+    - target: {fileID: 94929489573494182, guid: 9c65b3e2423de6947aa3225ece583937, type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
     - target: {fileID: 4399346081699232408, guid: 9c65b3e2423de6947aa3225ece583937, type: 3}
       propertyPath: m_Name
       value: Lumberjack Obstacle
@@ -4557,7 +4561,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1022501598064397607, guid: c10e01e92799cb54a9fb08fbc9989cff, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1771727738400767483, guid: c10e01e92799cb54a9fb08fbc9989cff, type: 3}
       propertyPath: m_IsActive
@@ -4589,27 +4593,27 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 2438269000145189486, guid: c10e01e92799cb54a9fb08fbc9989cff, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2438269000145189486, guid: c10e01e92799cb54a9fb08fbc9989cff, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2438269000145189486, guid: c10e01e92799cb54a9fb08fbc9989cff, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 756
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2438269000145189486, guid: c10e01e92799cb54a9fb08fbc9989cff, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 210
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2438269000145189486, guid: c10e01e92799cb54a9fb08fbc9989cff, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 378
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2438269000145189486, guid: c10e01e92799cb54a9fb08fbc9989cff, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -315
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2491897579901353469, guid: c10e01e92799cb54a9fb08fbc9989cff, type: 3}
       propertyPath: m_fontAsset
@@ -4665,27 +4669,27 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 6491843912044170768, guid: c10e01e92799cb54a9fb08fbc9989cff, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6491843912044170768, guid: c10e01e92799cb54a9fb08fbc9989cff, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6491843912044170768, guid: c10e01e92799cb54a9fb08fbc9989cff, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 756
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6491843912044170768, guid: c10e01e92799cb54a9fb08fbc9989cff, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 210
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6491843912044170768, guid: c10e01e92799cb54a9fb08fbc9989cff, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 378
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6491843912044170768, guid: c10e01e92799cb54a9fb08fbc9989cff, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -105
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6652498982121062973, guid: c10e01e92799cb54a9fb08fbc9989cff, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4906,6 +4910,10 @@ PrefabInstance:
     - target: {fileID: 3317318960621066210, guid: 380a486e6a300db4ebbf0aed85b75a02, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 6019976483241448037, guid: 380a486e6a300db4ebbf0aed85b75a02, type: 3}
+      propertyPath: m_Constraints
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 8059082246340154715, guid: 380a486e6a300db4ebbf0aed85b75a02, type: 3}
       propertyPath: m_Name
@@ -5156,6 +5164,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 908281941}
     m_Modifications:
+    - target: {fileID: 2165895300492896701, guid: c388cfdb87df498488c2128bdd781023, type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
     - target: {fileID: 2473059353563623043, guid: c388cfdb87df498488c2128bdd781023, type: 3}
       propertyPath: m_Icon
       value: 
@@ -7135,6 +7147,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 908281941}
     m_Modifications:
+    - target: {fileID: 94929489573494182, guid: 9c65b3e2423de6947aa3225ece583937, type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
     - target: {fileID: 4399346081699232408, guid: 9c65b3e2423de6947aa3225ece583937, type: 3}
       propertyPath: m_Name
       value: Lumberjack Obstacle (1)
@@ -11381,6 +11397,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 908281941}
     m_Modifications:
+    - target: {fileID: 2165895300492896701, guid: c388cfdb87df498488c2128bdd781023, type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
     - target: {fileID: 2473059353563623043, guid: c388cfdb87df498488c2128bdd781023, type: 3}
       propertyPath: m_Icon
       value: 
