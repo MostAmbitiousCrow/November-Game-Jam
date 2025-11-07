@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Friend
+  - Letter
   layers:
   - Default
   - TransparentFX
@@ -39,6 +40,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Particles
+    uniqueID: 256136783
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

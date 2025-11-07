@@ -1,18 +1,17 @@
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 
 public class Friend_Chain_Controller : MonoBehaviour
 {
     public static Friend_Chain_Controller instance;
-    [SerializeField] List<Friend_Controller> _connectedHands;
+    [SerializeField] List<Character_Controller_Script> _connectedHands;
 
     private void Awake()
     {
         instance = this;
     }
 
-    public void AddFriend(Friend_Controller friend)
+    public void AddFriend(Character_Controller_Script friend)
     {
         _connectedHands.Add(friend);
         friend.ID = _connectedHands.Count - 1;
@@ -22,34 +21,25 @@ public class Friend_Chain_Controller : MonoBehaviour
     {
         _connectedHands.RemoveAt(friendID);
         int id = 0;
-        foreach (var item in _connectedHands)
+        foreach (Character_Controller_Script item in _connectedHands)
         {
             item.ID = id;
             id++;
         }
     }
 
-    public Friend_Controller GetLastFriend()
+    public Character_Controller_Script GetLastFriend()
     {
-        if (_connectedHands != null)
-            return _connectedHands[^1];
-        else
-            return null;
+        return _connectedHands?[^1];
     }
 
-    public Friend_Controller GetCurrentFriend()
+    public Character_Controller_Script GetCurrentFriend()
     {
-        if (_connectedHands.Count > 0)
-            return _connectedHands[0];
-        else
-            return null;
+        return _connectedHands.Count > 0 ? _connectedHands[0] : null;
     }
 
     public bool FriendCheck()
     {
-        if (_connectedHands.Count > 0)
-            return true;
-        else
-            return false;
+        return _connectedHands.Count > 0;
     }
 }

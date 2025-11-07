@@ -90,7 +90,7 @@ public class PlayerMovement : MonoBehaviour
         if (!Friend_Chain_Controller.instance.FriendCheck())
             return;
 
-        Friend_Controller selectedFriend = Friend_Chain_Controller.instance.GetCurrentFriend();
+        Character_Controller_Script selectedFriend = Friend_Chain_Controller.instance.GetCurrentFriend();
 
         //Reads whether the LMB is being pressed
         float moveInput = context.ReadValue<float>();
@@ -137,7 +137,7 @@ public class PlayerMovement : MonoBehaviour
 
         _projectSound.Play();
     }
-    public void FriendPowerCalcAndMove(Friend_Controller selectedFriend)
+    public void FriendPowerCalcAndMove(Character_Controller_Script selectedFriend)
     {
         //Figures out how far the player needs to move based on the distance between the 2 mouse points
         range = Vector3.Distance(mouseStartPoint, mouseEndPoint);
