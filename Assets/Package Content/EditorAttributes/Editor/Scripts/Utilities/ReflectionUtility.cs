@@ -128,7 +128,7 @@ namespace EditorAttributes.Editor.Utility
 		}
 
 		/// <summary>
-		/// Finds a member from the target and it's inherited types
+		/// Finds a member from the target type
 		/// </summary>
 		/// <param name="memberName">The name of the member to look for</param>
 		/// <param name="targetType">The type to get the member from</param>
@@ -137,29 +137,28 @@ namespace EditorAttributes.Editor.Utility
 		/// <returns>The member info of the specified member type</returns>
 		public static MemberInfo FindMember(string memberName, Type targetType, BindingFlags bindingFlags, MemberTypes memberType)
 		{
-			MemberInfo memberInfo = null;
-
-			while (targetType != null)
+			switch (memberType)
 			{
-				switch (memberType)
+				case MemberTypes.Field:
 				{
-					case MemberTypes.Field:
-						memberInfo = targetType.GetField(memberName, bindingFlags);
-						break;
-
-					case MemberTypes.Property:
-						memberInfo = targetType.GetProperty(memberName, bindingFlags);
-						break;
-
-					case MemberTypes.Method:
-						memberInfo = targetType.GetMethod(memberName, bindingFlags);
-						break;
+					if (targetType != null)
+						return targetType.GetField(memberName, bindingFlags);
 				}
+				break;
 
-				if (memberInfo != null)
-					return memberInfo;
+				case MemberTypes.Property:
+				{
+					if (targetType != null)
+						return targetType.GetProperty(memberName, bindingFlags);
+				}
+				break;
 
-				targetType = targetType.BaseType;
+				case MemberTypes.Method:
+				{
+					if (targetType != null)
+						return targetType.GetMethod(memberName, bindingFlags);
+				}
+				break;
 			}
 
 			return null;
@@ -263,11 +262,17 @@ namespace EditorAttributes.Editor.Utility
 		}
 
 		/// <summary>
-		/// Checks to see if a type is a list or array
+		/// Checks to see if a seralized property is a list or array
 		/// </summary>
-		/// <param name="type">The type to check</param>
-		/// <returns>True if the type is a list or array</returns>
-		public static bool IsTypeCollection(Type type) => type.IsArray || type.GetInterfaces().Contains(typeof(IList));
+		/// <param name="property">The serialized property to check</param>
+		/// <returns>True if the property is a list or array, false otherwise</returns>
+		public static bool IsPropertyCollection(SerializedProperty property)
+		{
+			var arrayField = FindField(property.propertyPath.Split(".")[0], property);
+			var memberInfoType = GetMemberInfoType(arrayField);
+
+			return memberInfoType.IsArray || memberInfoType.GetInterfaces().Contains(typeof(IList));
+		}
 
 		/// <summary>
 		/// Checks to see if a member has one of the specified attributes

@@ -79,19 +79,12 @@ namespace EditorAttributes.Editor
 				for (int i = 0; i < functionParameters.Length; i++)
 				{
 					var parameter = functionParameters[i];
-
-					if (!parameter.ParameterType.IsPrimitive && parameter.ParameterType != typeof(string) && !parameter.ParameterType.IsEnum)
-					{
-						foldout.Add(new HelpBox($"Parameter type {parameter.ParameterType} is not supported. Only Unity supported primitive types, strings and enums are supported.", HelpBoxMessageType.Error));
-						continue;
-					}
-
 					var field = PropertyDrawerBase.CreateFieldForType(parameter.ParameterType, parameter.Name, ConvertParameterValue(parameter.ParameterType, parameterValues[function][i]));
 
 					if (EditorExtension.GLOBAL_COLOR != EditorExtension.DEFAULT_GLOBAL_COLOR)
 						ColorUtils.ApplyColor(field, EditorExtension.GLOBAL_COLOR);
 
-					int index = i; // Local copy for the lambda
+					int index = i;
 
 					PropertyDrawerBase.RegisterValueChangedCallbackByType(parameter.ParameterType, field, (valueCallback) => parameterValues[function][index] = valueCallback);
 
@@ -321,12 +314,6 @@ namespace EditorAttributes.Editor
 			if (parameterType == typeof(string))
 			{
 				return parameterValue?.ToString();
-			}
-			else if (parameterType == typeof(char))
-			{
-				string stringParamValue = parameterValue.ToString();
-
-				return isDBNull || stringParamValue.Length != 1 ? '\0' : Convert.ToChar(parameterValue);
 			}
 			else if (parameterType == typeof(int))
 			{

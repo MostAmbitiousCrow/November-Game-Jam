@@ -169,6 +169,11 @@ public class PlayerMovement : MonoBehaviour
             _friendArrowRenderer.SetPosition(0, mouseStartPoint);
             _friendArrowRenderer.SetPosition(1, mousePoint);
         }
+        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            
+        }
     }
    
 }
