@@ -1,5 +1,6 @@
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Menu_Manager_Pause : Menu_Manager
 {
@@ -61,6 +62,7 @@ public class Menu_Manager_Pause : Menu_Manager
     public void QuitToMenu()
     {
         //GameManager.SceneManager.LoadScene(MainSceneManager.GameScenes.MainMenu);
+        Application.Quit();
         print("Quit to Menu...");
     }
 

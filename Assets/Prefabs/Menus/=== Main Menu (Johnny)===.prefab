@@ -5683,6 +5683,8 @@ MonoBehaviour:
   screenDatas:
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   currentScreen: 0
   _startScreen: 0
 --- !u!114 &7054123535022363344
