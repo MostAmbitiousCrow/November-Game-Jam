@@ -6,14 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="e8fa09a9-1a68-45a9-a127-a7075d2237b2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.November-Game-Jam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.November-Game-Jam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Menus/=== Main Menu (Johnny)===.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Menus/=== Main Menu (Johnny)===.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Asteroid Border/Background1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Asteroid Border/Background1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Asteroid Border/Background2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Asteroid Border/Background2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Asteroid Border/Background3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Asteroid Border/Background3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Asteroid Border/Background4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Asteroid Border/Background4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Asteroid Border/TitleScreen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Asteroid Border/TitleScreen.png.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Menus/=== Pause Menu ===.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Menus/=== Pause Menu ===.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Main Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Main Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menus/Menu_Manager_Pause.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menus/Menu_Manager_Pause.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/PC_RPAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/PC_RPAsset.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,8 +30,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/../Component-4-2025/Assets/Scripts/CameraMove.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../Joy-Division/Joy-Division/Assets/Scripts/Movement.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Component-4-2025/Assets/Scripts/CameraMove.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Joy-Division/Joy-Division/Assets/Scripts/Movement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Joy-Division/Joy-Division/Assets/Scripts/PlayerInputActions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@aa507f3228f0/Runtime/TMP/TMP_PackageResourceImporter.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -123,6 +128,7 @@
       <workItem from="1762486597651" duration="479000" />
       <workItem from="1762512292265" duration="1481000" />
       <workItem from="1762518701917" duration="2000" />
+      <workItem from="1762521071321" duration="1175000" />
     </task>
     <servers />
   </component>

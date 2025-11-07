@@ -302,7 +302,9 @@ MonoBehaviour:
   _audioSource: {fileID: 2975854705537476227}
   _canvas: {fileID: 8199408995818925659}
   _transitionArtController: {fileID: 7665587661956358317}
-  screenDatas: []
+  screenDatas:
+  - {fileID: 0}
+  - {fileID: 0}
   currentScreen: 0
   _startScreen: 0
   playerGO: {fileID: 0}
