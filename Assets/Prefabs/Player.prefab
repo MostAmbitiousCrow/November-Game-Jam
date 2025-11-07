@@ -55,6 +55,8 @@ MonoBehaviour:
   _connectedRightHandRb: {fileID: 0}
   _connectedLeftHandRB: {fileID: 0}
   _connectDistance: 0.05
+  _speed: 10
+  _connectSound: {fileID: 3744635458889881182}
 --- !u!1 &3333043999206795382
 GameObject:
   m_ObjectHideFlags: 0
@@ -688,7 +690,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 4355324959899474148}
+  - {fileID: 1425301064197863133}
   m_Father: {fileID: 530635293339497526}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7752562400177604104
@@ -723,6 +727,82 @@ MonoBehaviour:
           value: 0
         - key: ignoreDelayAfterFirst
           value: True
+  showEvents: 0
+  onStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  onLooped:
+    m_PersistentCalls:
+      m_Calls: []
+  onCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &5064230223730963968
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1425301064197863133}
+  - component: {fileID: 6184588316391115010}
+  m_Layer: 6
+  m_Name: Jetpack Project Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1425301064197863133
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5064230223730963968}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1871257430903579080}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6184588316391115010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5064230223730963968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7444b0a6e88911f44961f06ff94992ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playInstantly: 0
+  isGroup: 0
+  request: PlayerSquish_01-9eab01c5-7888-4545-9b1d-9d722f79a5c0
+  groupRequest: 
+  editModuleSettings:
+    list:
+    - key: CarterGames.Assets.AudioManager.VolumeEdit, CarterGames.AudioManager.Runtime,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      value:
+        list:
+        - key: showModule
+          value: True
+        - key: enabled
+          value: True
+        - key: moduleMode
+          value: 0
+        - key: normalEditValue
+          value: 0
+        - key: rangeEditValue
+          value: '[0.0, 1.0]'
+        - key: varianceEditValue
+          value: '[1.0, 0.1, 0.0, 1.0]'
   showEvents: 0
   onStarted:
     m_PersistentCalls:
@@ -6489,6 +6569,7 @@ MonoBehaviour:
   _currentHandConnector: {fileID: 0}
   _thisHandConnector: {fileID: 9216120984978724632}
   _jetpackParticles: {fileID: 6738799537114456311}
+  _projectSound: {fileID: 6184588316391115010}
 --- !u!114 &886220355458401847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6550,6 +6631,66 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 2
+--- !u!1 &8791209511411171409
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4355324959899474148}
+  - component: {fileID: 3744635458889881182}
+  m_Layer: 6
+  m_Name: Connected Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4355324959899474148
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8791209511411171409}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1871257430903579080}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3744635458889881182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8791209511411171409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7444b0a6e88911f44961f06ff94992ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playInstantly: 0
+  isGroup: 0
+  request: FriendConnectSound-fb826aea-5984-470a-820e-45b692f1bdee
+  groupRequest: 
+  editModuleSettings:
+    list: []
+  showEvents: 0
+  onStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  onLooped:
+    m_PersistentCalls:
+      m_Calls: []
+  onCompleted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &9162667345820531359
 GameObject:
   m_ObjectHideFlags: 0

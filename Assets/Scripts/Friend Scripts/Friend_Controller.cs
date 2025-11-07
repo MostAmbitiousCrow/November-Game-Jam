@@ -60,6 +60,12 @@ public class Friend_Controller : MonoBehaviour
         friend._handConnector.AssignConnectedHand(_handConnector);
     }
 
+    public void AttatchToPlanet(Hand_Connector hand)
+    {
+        _isConnected = true;
+        _handConnector.ConnectHand(hand);
+    }
+
     public void OnThrown()
     {
         _handConnector.UnassignConnectedHand();

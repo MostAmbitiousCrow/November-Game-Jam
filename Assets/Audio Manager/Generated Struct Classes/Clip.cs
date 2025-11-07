@@ -13,5 +13,7 @@ namespace CarterGames.Assets.AudioManager
         public const string CrystalSoundwav = "CrystalSoundwav-719de198-4b27-4c14-aa5f-bce2ab54b8f6";
         public const string TreeBreaking = "TreeBreaking-0708f49f-a5b9-4f8a-a5e7-daf0d43816d3";
         public const string FriendConnectSound = "FriendConnectSound-fb826aea-5984-470a-820e-45b692f1bdee";
+        public const string Gee = "Gee-b23674df-d12f-48ee-b48e-ce0d172590cf";
+        public const string Gwam = "Gwam-d2778886-1536-401b-86f4-fdfd69d8bf97";
     }
 }

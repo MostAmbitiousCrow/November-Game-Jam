@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using CarterGames.Assets.AudioManager;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -24,6 +25,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Hand_Connector _thisHandConnector;
     public Hand_Connector HandConnector { get { return _thisHandConnector; } }
     [SerializeField] ParticleSystem _jetpackParticles;
+
+    [Header("Audio")]
+    [SerializeField] InspectorAudioClipPlayer _projectSound;
 
     void Start()
     {
@@ -130,9 +134,8 @@ public class PlayerMovement : MonoBehaviour
         var powerY = _playerMoveDirection.y * power;
         rb.AddForce(powerX, powerY, 0, ForceMode.Impulse);
         _jetpackParticles.Emit(10);
-        //Debug.Log("X =" + powerX);
-        //Debug.Log("Y = " + powerY);
 
+        _projectSound.Play();
     }
     public void FriendPowerCalcAndMove(Friend_Controller selectedFriend)
     {
@@ -142,9 +145,8 @@ public class PlayerMovement : MonoBehaviour
         var powerY = _friendMovedirection.y * power;
         selectedFriend.Rb.AddForce(powerX, powerY, 0, ForceMode.Impulse);
         selectedFriend.OnThrown();
-        //Debug.Log("X =" + powerX);
-        //Debug.Log("Y = " + powerY);
 
+        //_projectSound.Play();
     }
 
     void Update()
