@@ -26,12 +26,9 @@ public class PlayerMovement : MonoBehaviour
     public Hand_Connector HandConnector { get { return _thisHandConnector; } }
     [SerializeField] ParticleSystem _jetpackParticles;
 
-<<<<<<< HEAD
     public Menu_Manager_Pause pauseMenu;
-=======
     [Header("Audio")]
     [SerializeField] InspectorAudioClipPlayer _projectSound;
->>>>>>> Envelope
 
     void Start()
     {
