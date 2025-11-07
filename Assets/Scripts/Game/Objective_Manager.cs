@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Objective_Manager : MonoBehaviour
 {
@@ -33,7 +34,7 @@ public class Objective_Manager : MonoBehaviour
 
     public void DeliveredLetter()
     {
-
+        SceneManager.LoadScene("Complete");
     }
 
     public bool CheckVictoryCondition()
