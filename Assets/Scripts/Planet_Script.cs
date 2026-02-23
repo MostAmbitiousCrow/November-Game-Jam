@@ -44,9 +44,16 @@ public class Planet_Script : MonoBehaviour
 
         character.AttatchToPlanet(_handPoints[_currentPoint]);
         _currentPoint++;
-        if(character.CompareTag("Friend"))
-            _connectedFriends.Add(character);
-        Objective_Manager.Instance.SavedFriend();
+        _connectedFriends.Add(character);
+
+        if (character.CompareTag("Friend"))
+        {
+            Objective_Manager.Instance.SavedFriend();
+        }
+        else if (character.CompareTag("Letter"))
+        {
+            _hasLetter = true;
+        }
         print($"{character.name} added to orbit!");
     }
 
