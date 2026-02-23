@@ -1969,14 +1969,6 @@ PrefabInstance:
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 1948193404}
-    - target: {fileID: 5716132360448107166, guid: 162878b38140f54409167829c054a14c, type: 3}
-      propertyPath: _friendArrowActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6729560198091271034, guid: 162878b38140f54409167829c054a14c, type: 3}
-      propertyPath: m_UseWorldSpace
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8205648778955450859, guid: 162878b38140f54409167829c054a14c, type: 3}
       propertyPath: m_Name
       value: Player
@@ -3907,7 +3899,7 @@ SpriteShapeRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1

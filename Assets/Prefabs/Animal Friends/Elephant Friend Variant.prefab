@@ -8,13 +8,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 454408466518708832, guid: c5eceab5fe1c5f9438db36a4baf3eeb7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1349633131, guid: f113b16cb06bb3e488e485aefe20fcc2, type: 3}
     - target: {fileID: 1643569067263571987, guid: c5eceab5fe1c5f9438db36a4baf3eeb7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.84
+      value: 217.6
       objectReference: {fileID: 0}
     - target: {fileID: 1643569067263571987, guid: c5eceab5fe1c5f9438db36a4baf3eeb7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.15
+      value: -47.7
       objectReference: {fileID: 0}
     - target: {fileID: 1643569067263571987, guid: c5eceab5fe1c5f9438db36a4baf3eeb7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -26,15 +30,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1643569067263571987, guid: c5eceab5fe1c5f9438db36a4baf3eeb7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1643569067263571987, guid: c5eceab5fe1c5f9438db36a4baf3eeb7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1643569067263571987, guid: c5eceab5fe1c5f9438db36a4baf3eeb7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1643569067263571987, guid: c5eceab5fe1c5f9438db36a4baf3eeb7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -48,14 +52,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2437115099848094397, guid: c5eceab5fe1c5f9438db36a4baf3eeb7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2b978d7870684fd479ff58288f84bd2b, type: 3}
     - target: {fileID: 3365923719473651413, guid: c5eceab5fe1c5f9438db36a4baf3eeb7, type: 3}
       propertyPath: m_Name
       value: Elephant Friend Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4555249209389232443, guid: c5eceab5fe1c5f9438db36a4baf3eeb7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 465250104, guid: 32a3d8a82201bad45b6c5880ed7c60f7, type: 3}
     - target: {fileID: 5581969717181998063, guid: c5eceab5fe1c5f9438db36a4baf3eeb7, type: 3}
       propertyPath: _role
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6068146469745436875, guid: c5eceab5fe1c5f9438db36a4baf3eeb7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2d85d4c3fa7580c44a62d4dd8576800a, type: 3}
+    - target: {fileID: 8549741105827362578, guid: c5eceab5fe1c5f9438db36a4baf3eeb7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1226229122, guid: f9827fdfbf8c57e45a6acd3c06570bb6, type: 3}
+    - target: {fileID: 8763393335954962450, guid: c5eceab5fe1c5f9438db36a4baf3eeb7, type: 3}
+      propertyPath: m_Mass
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9189783568065168848, guid: c5eceab5fe1c5f9438db36a4baf3eeb7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1867248410, guid: 0bbfa00594175254a801fb55dc15e396, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

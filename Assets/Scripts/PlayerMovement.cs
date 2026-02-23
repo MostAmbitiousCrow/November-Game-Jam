@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
 
     float speed;
     [SerializeField] float range;
-    [SerializeField] float power = 5f;
+    [SerializeField] float power = 3f;
 
     [SerializeField] bool _playerArrowActive, _friendArrowActive;
     [SerializeField] LineRenderer _playerArrowRenderer, _friendArrowRenderer;
@@ -131,8 +131,8 @@ public class PlayerMovement : MonoBehaviour
     {
         //Figures out how far the player needs to move based on the distance between the 2 mouse points
         range = Vector3.Distance(mouseStartPoint, mouseEndPoint);
-        var powerX = _playerMoveDirection.x * power;
-        var powerY = _playerMoveDirection.y * power;
+        var powerX = _playerMoveDirection.x;
+        var powerY = _playerMoveDirection.y;
         rb.AddForce(powerX, powerY, 0, ForceMode.Impulse);
         _jetpackParticles.Emit(10);
 
@@ -142,8 +142,8 @@ public class PlayerMovement : MonoBehaviour
     {
         //Figures out how far the player needs to move based on the distance between the 2 mouse points
         range = Vector3.Distance(mouseStartPoint, mouseEndPoint);
-        var powerX = _friendMovedirection.x * power;
-        var powerY = _friendMovedirection.y * power;
+        var powerX = _friendMovedirection.x * 2f;
+        var powerY = _friendMovedirection.y * 2f;
         selectedFriend.Rb.AddForce(powerX, powerY, 0, ForceMode.Impulse);
         selectedFriend.OnThrown();
 
