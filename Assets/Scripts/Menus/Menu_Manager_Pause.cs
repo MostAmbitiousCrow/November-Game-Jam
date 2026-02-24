@@ -107,4 +107,8 @@ public class Menu_Manager_Pause : Menu_Manager
         if (ClosingScreen.UseExitButton) _eventSystem.SetSelectedGameObject(ClosingScreen.ExitButton.gameObject);
         else _eventSystem.SetSelectedGameObject(OpeningScreen.EnterButton.gameObject);
     }
+
+    public override void SortScreens()
+    {
+    }
 }

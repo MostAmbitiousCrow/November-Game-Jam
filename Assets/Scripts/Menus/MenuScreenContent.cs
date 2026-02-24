@@ -49,9 +49,12 @@ public abstract class MenuScreenContent : MonoBehaviour
     /// <summary> An additional event that will trigger upon entering this screen </summary>
     public UnityEvent TriggerEvent { get { return _triggerEvent; } }
 
-    private void OnValidate()
+    private void Start()
     {
         _screenRoot = gameObject;
+    }
+    private void OnValidate()
+    {
         Validation();
     }
 

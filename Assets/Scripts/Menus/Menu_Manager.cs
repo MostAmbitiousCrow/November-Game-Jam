@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(AudioSource))]
 [RequireComponent(typeof(Menu_Transition_Controller))]
-public class Menu_Manager : MonoBehaviour // By Samuel White
+public abstract class Menu_Manager : MonoBehaviour // By Samuel White
 {
     /*
     ========================================
@@ -41,18 +41,31 @@ public class Menu_Manager : MonoBehaviour // By Samuel White
     [SerializeField] protected Menu_Transition_Controller _transitionArtController;
 
     [Header("Menu Data")]
-    [SerializeField, ReadOnly] protected MenuScreenContent[] screenDatas;
+    [SerializeField] protected MenuScreenContent[] screenDatas;
     [SerializeField, ReadOnly] protected int currentScreen;
     [SerializeField] protected int _startScreen;
 
     #endregion
 
-    private void Awake()
+    private void Start()
     {
+        SortScreens();
+
         Menu_Transition_Controller.OnTransitionStarted += ScreenOpened;
         Menu_Transition_Controller.OnTransitionWaiting += ToggleScreen;
         Menu_Transition_Controller.OnTransitionWaitCompleted += ScreenClosed;
         //Main_Menu_Transition_Controller.OnTransitionCompleted +=  // Something
+
+        _eventSystem = FindFirstObjectByType<EventSystem>();
+        EventSystem.current = _eventSystem;
+
+        foreach (var item in screenDatas)
+            item.ScreenRoot.SetActive(false);
+
+        screenDatas[_startScreen].ScreenRoot.SetActive(true);
+
+        currentScreen = _startScreen;
+        _eventSystem.SetSelectedGameObject(screenDatas[currentScreen].EnterButton.gameObject);
     }
 
     private void OnEnable()
@@ -70,24 +83,20 @@ public class Menu_Manager : MonoBehaviour // By Samuel White
         //Main_Menu_Transition_Controller.OnTransitionCompleted -=  // Something
     }
 
-    private void Start()
-    {
-        foreach (var item in screenDatas)
-            item.ScreenRoot.SetActive(false);
-
-        screenDatas[_startScreen].ScreenRoot.SetActive(true);
-
-        currentScreen = _startScreen;
-        _eventSystem.SetSelectedGameObject(screenDatas[currentScreen].EnterButton.gameObject);
-    }
-
     #region Screen Methods
     public void InvokeScreen(int type)
     {
         _transitionArtController.TriggerTransition(type, currentScreen);
+        print(type + " was invoked");
     }
 
-    protected virtual void ToggleScreen(int openingScreen, int closingScreen) { }
+    protected virtual void ToggleScreen(int openingScreen, int closingScreen) 
+    {
+        var closingRoot = screenDatas[closingScreen].ScreenRoot;
+        if (closingRoot != null) closingRoot.SetActive(false);
+        var openingRoot = screenDatas[openingScreen].ScreenRoot;
+        if (openingRoot != null) openingRoot.SetActive(true);
+    }
 
     protected void ScreenOpened(int screen)
     {
@@ -102,13 +111,17 @@ public class Menu_Manager : MonoBehaviour // By Samuel White
         MenuScreenContent sd =  screenDatas[currentScreen];
         if (sd.ExitSFX) _audioSource.PlayOneShot(sd.ExitSFX);
         ToggleInput(true);
+        currentScreen = screen;
     }
+
+    public abstract void SortScreens();
     #endregion
 
     #region Input Toggle
     protected void ToggleInput(bool state)
     {
-        _eventSystem.enabled = state;
+        if (_eventSystem) _eventSystem.enabled = state;
+        else (_eventSystem = FindFirstObjectByType<EventSystem>()).enabled = state;
     }
     #endregion
 

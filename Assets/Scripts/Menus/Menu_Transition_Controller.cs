@@ -27,7 +27,7 @@ public class Menu_Transition_Controller : MonoBehaviour
     [SerializeField, ShowField(nameof(_doTransitionAnimation))] float _transitionEndTime = .1f;
 
     [Header("Dependency")]
-    [SerializeField] Menu_Manager _mainMenuManager;
+    [SerializeField] Menu_Manager _menuManager;
 
     /// <summary>
     /// Method to trigger the screen transition
@@ -58,7 +58,7 @@ public class Menu_Transition_Controller : MonoBehaviour
         float t = 0f;
         while (t * speed < _transitionStartTime)
         {
-            // Insert your Start Transition Animation code here
+            // Insert your optional Start Transition Animation code here
 
             yield return t += Time.unscaledDeltaTime;
         }
@@ -67,7 +67,7 @@ public class Menu_Transition_Controller : MonoBehaviour
         OnTransitionWaiting?.Invoke(screenToOpen, screenToClose);
         while (t * speed < _transitionWaitTime)
         {
-            // Insert your Transition Animation code here
+            // Insert your optional Transition Animation code here
 
             yield return t += Time.unscaledDeltaTime;
         }
@@ -76,7 +76,7 @@ public class Menu_Transition_Controller : MonoBehaviour
         t = 0f;
         while (t * speed < _transitionEndTime)
         {
-            // Insert your End Transition Animation code here
+            // Insert your optional End Transition Animation code here
 
             yield return t += Time.unscaledDeltaTime;
         }
@@ -87,5 +87,13 @@ public class Menu_Transition_Controller : MonoBehaviour
         _isTransitioning = false;
 
         yield break;
+    }
+
+    public static void ResetTransitionEvents()
+    {
+        OnTransitionStarted = null;
+        OnTransitionWaiting = null;
+        OnTransitionWaitCompleted = null;
+        OnTransitionCompleted = null;
     }
 }

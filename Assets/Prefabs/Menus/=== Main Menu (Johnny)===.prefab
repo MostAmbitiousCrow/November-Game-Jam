@@ -2209,7 +2209,7 @@ GameObject:
   - component: {fileID: 7771451221779468627}
   - component: {fileID: 1172971938951801309}
   m_Layer: 0
-  m_Name: --- Screen (CreditsScreen = 3) ---
+  m_Name: --- Screen (ExtrasScreen = 3) ---
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5704,7 +5704,7 @@ MonoBehaviour:
   _transitionStartTime: 0.1
   _transitionWaitTime: 0.3
   _transitionEndTime: 0.1
-  _mainMenuManager: {fileID: 7839960513094509169}
+  _menuManager: {fileID: 0}
 --- !u!82 &1722498529620751918
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7084,7 +7084,7 @@ GameObject:
   - component: {fileID: 6491851568697359763}
   - component: {fileID: 1599348164077643334}
   m_Layer: 0
-  m_Name: --- Screen (SettingsScreen = 2) ---
+  m_Name: --- Screen (CreditsScreen = 2) ---
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
