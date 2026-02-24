@@ -23,6 +23,6 @@ public class MenuScreenContent_Main : MenuScreenContent
     [Serializable]
     public enum MainMenuScreenTypes
     {
-        StartScreen = 0, TitleScreen = 1, SettingsScreen = 2, CreditsScreen = 3
+        StartScreen = 0, TitleScreen = 1, CreditsScreen = 2, ExtrasScreen = 3 //, SettingsScreen = 2,
     }
 }

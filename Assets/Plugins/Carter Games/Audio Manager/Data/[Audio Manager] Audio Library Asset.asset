@@ -302,7 +302,7 @@ MonoBehaviour:
         value: {fileID: 8300000, guid: d2c71f6d72ff21f4c80a6b9828b155ef, type: 3}
         path: Assets/Audio/Sounds/Player/CatNoise.wav
         dynamicStartTime:
-          time: 0
+          time: 0.3
           threshold: 0
           option: 1
           tabPos: 1
