@@ -4,11 +4,16 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Animator))]
 public class LevelSelectItem : MonoBehaviour
 {
+    [SerializeField] private bool isComplete;
+    [SerializeField] private bool isLocked; //TODO: Implement locked levels feature
     public int ID;
     public string LevelSceneName => levelSceneName;
     [SerializeField] private string levelSceneName;
 
+    [SerializeField] private Sprite completedSprite, incompleteSprite;
+
     private Animator _animator;
+    private SpriteRenderer _spriteRenderer;
 
     private readonly UnityEvent _selectEvent = new();
 
@@ -19,12 +24,30 @@ public class LevelSelectItem : MonoBehaviour
     private void Awake()
     {
         _animator = GetComponent<Animator>();
+        _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 
         // Auto set ID
         ID = transform.GetSiblingIndex();
 
         var manager = FindFirstObjectByType<LevelSelectManager>();
         _selectEvent.AddListener(() => manager.SelectLevel(ID));
+
+        UpdateState();
+    }
+
+    private void UpdateState()
+    {
+        isComplete = GameProgress.CheckCompleteLevel(ID);
+        _spriteRenderer.sprite = isComplete ? completedSprite : incompleteSprite;
+    }
+
+    private void OnEnable()
+    {
+        GameProgress.ProgressUpdate += UpdateState;
+    }
+    private void OnDisable()
+    {
+        GameProgress.ProgressUpdate -= UpdateState;
     }
 
     public void Activate()

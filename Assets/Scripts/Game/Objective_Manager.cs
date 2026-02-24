@@ -34,7 +34,12 @@ public class Objective_Manager : MonoBehaviour
 
     public void DeliveredLetter()
     {
-        SceneManager.LoadScene("Complete");
+        // Mark this level completed!
+        LevelDetailsInstance.SetLevelCompleted();
+
+        // Return to Level Select
+        SceneLoader.LoadSceneRequest?.Invoke("Level Select");
+        Debug.Log("Letter Delivered, returning to level select!");
     }
 
     public bool CheckVictoryCondition()

@@ -134,8 +134,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 785be0ed365db234bbb06f259ccfe32e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isComplete: 0
+  isLocked: 0
   ID: 0
   levelSceneName: 
+  completedSprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  incompleteSprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
 --- !u!95 &4265883467680383056
 Animator:
   serializedVersion: 7
