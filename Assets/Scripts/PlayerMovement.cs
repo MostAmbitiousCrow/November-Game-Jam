@@ -1,9 +1,15 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using CarterGames.Assets.AudioManager;
+using Microsoft.Unity.VisualStudio.Editor;
+using TMPro;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public SpriteRenderer friendUI;
+    private SpriteRenderer[] friendSelected;
+    private Sprite friendHeadImage;
+    public float friendListSelect = 0;
     private InputSystem_Actions playerInputActions;
     [SerializeField] Rigidbody rb;
     Vector3 throwInput;
@@ -42,6 +48,8 @@ public class PlayerMovement : MonoBehaviour
         playerInputActions.Player.PlayerGrab.canceled += OnPGrab;
         playerInputActions.Player.FriendGrab.performed += OnFGrab;
         playerInputActions.Player.FriendGrab.canceled += OnFGrab;
+        playerInputActions.Player.FriendScroll.performed += OnFScroll;
+        playerInputActions.Player.FriendScroll.canceled += OnFScroll;
     }
     void OnDisable()
     {
@@ -50,6 +58,8 @@ public class PlayerMovement : MonoBehaviour
         playerInputActions.Player.PlayerGrab.canceled -= OnPGrab;
         playerInputActions.Player.FriendGrab.performed -= OnFGrab;
         playerInputActions.Player.FriendGrab.canceled -= OnFGrab;
+        playerInputActions.Player.FriendScroll.performed -= OnFScroll;
+        playerInputActions.Player.FriendScroll.canceled -= OnFScroll;
     }
 
     public void OnPGrab(InputAction.CallbackContext context)
@@ -91,7 +101,8 @@ public class PlayerMovement : MonoBehaviour
         if (!Friend_Chain_Controller.instance.FriendCheck())
             return;
 
-        Character_Controller_Script selectedFriend = Friend_Chain_Controller.instance.GetCurrentFriend();
+            Character_Controller_Script selectedFriend = Friend_Chain_Controller.instance._connectedHands[(int)friendListSelect];
+            ;//Friend_Chain_Controller.instance.GetCurrentFriend();
 
         //Reads whether the LMB is being pressed
         float moveInput = context.ReadValue<float>();
@@ -121,6 +132,10 @@ public class PlayerMovement : MonoBehaviour
             //selectedFriend.Rb.MoveRotation(Quaternion.AngleAxis(-angle + 180, Vector3.forward)); // Rb alternative
             selectedFriend.transform.rotation = Quaternion.AngleAxis(-angle + 180, Vector3.forward);
             FriendPowerCalcAndMove(selectedFriend);
+            if (friendListSelect != 0)
+            {
+                friendListSelect--;
+            }
 
             //StartCoroutine(MovePlayer(power));
         }
@@ -150,8 +165,39 @@ public class PlayerMovement : MonoBehaviour
         //_projectSound.Play();
     }
 
+    public void OnFScroll(InputAction.CallbackContext context)
+    {
+        float scrollInput = context.ReadValue<float>();
+        friendListSelect += scrollInput;
+        
+        if (friendListSelect < 0 && Friend_Chain_Controller.instance._connectedHands.Count > 0)
+        {
+            friendListSelect = Friend_Chain_Controller.instance._connectedHands.Count - 1;
+        }
+
+        if (friendListSelect < 0 && Friend_Chain_Controller.instance._connectedHands.Count == 0)
+        {
+            friendListSelect = 0;
+        }
+
+        if (friendListSelect >= Friend_Chain_Controller.instance._connectedHands.Count)
+        {
+            friendListSelect = 0;
+        }
+        
+        
+    }
+
     void Update()
     {
+        friendSelected = Friend_Chain_Controller.instance._connectedHands[(int)friendListSelect].gameObject.GetComponentsInChildren<SpriteRenderer>();
+        friendHeadImage = friendSelected[2].sprite;
+        friendUI.sprite = friendHeadImage;
+        if (Friend_Chain_Controller.instance._connectedHands.Count <= 0)
+        {
+            friendUI.sprite = null;
+        }
+        
         if (_playerArrowActive)
         {
             //will draw a line to show the players headed direction if the mouse is currently held down

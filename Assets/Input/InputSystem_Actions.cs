@@ -108,7 +108,16 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""FriendScroll"",
+                    ""type"": ""Value"",
+                    ""id"": ""4789859b-a560-4708-bab8-60883a8706f4"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -127,12 +136,45 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""dfbb5537-1ed2-43ad-b765-dd9dfadd19c9"",
                     ""path"": ""<Mouse>/rightButton"",
-                    ""interactions"": ""Hold"",
+                    ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
                     ""action"": ""FriendGrab"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""2fd4b00b-1a34-4c3d-8108-47724688c7dc"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FriendScroll"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""cefdb40e-a152-4878-8b7b-bceca424c21c"",
+                    ""path"": ""<Mouse>/scroll/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FriendScroll"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""18b7c637-bf26-4e95-a3b0-913fb35566dd"",
+                    ""path"": ""<Mouse>/scroll/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FriendScroll"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         },
@@ -731,6 +773,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_PlayerGrab = m_Player.FindAction("PlayerGrab", throwIfNotFound: true);
         m_Player_FriendGrab = m_Player.FindAction("FriendGrab", throwIfNotFound: true);
+        m_Player_FriendScroll = m_Player.FindAction("FriendScroll", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -826,6 +869,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
     private readonly InputAction m_Player_PlayerGrab;
     private readonly InputAction m_Player_FriendGrab;
+    private readonly InputAction m_Player_FriendScroll;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -845,6 +889,10 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/FriendGrab".
         /// </summary>
         public InputAction @FriendGrab => m_Wrapper.m_Player_FriendGrab;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/FriendScroll".
+        /// </summary>
+        public InputAction @FriendScroll => m_Wrapper.m_Player_FriendScroll;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -877,6 +925,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @FriendGrab.started += instance.OnFriendGrab;
             @FriendGrab.performed += instance.OnFriendGrab;
             @FriendGrab.canceled += instance.OnFriendGrab;
+            @FriendScroll.started += instance.OnFriendScroll;
+            @FriendScroll.performed += instance.OnFriendScroll;
+            @FriendScroll.canceled += instance.OnFriendScroll;
         }
 
         /// <summary>
@@ -894,6 +945,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @FriendGrab.started -= instance.OnFriendGrab;
             @FriendGrab.performed -= instance.OnFriendGrab;
             @FriendGrab.canceled -= instance.OnFriendGrab;
+            @FriendScroll.started -= instance.OnFriendScroll;
+            @FriendScroll.performed -= instance.OnFriendScroll;
+            @FriendScroll.canceled -= instance.OnFriendScroll;
         }
 
         /// <summary>
@@ -1208,6 +1262,13 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnFriendGrab(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "FriendScroll" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnFriendScroll(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.

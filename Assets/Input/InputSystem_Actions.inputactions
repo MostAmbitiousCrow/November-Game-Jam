@@ -22,7 +22,16 @@
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "FriendScroll",
+                    "type": "Value",
+                    "id": "4789859b-a560-4708-bab8-60883a8706f4",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -41,12 +50,45 @@
                     "name": "",
                     "id": "dfbb5537-1ed2-43ad-b765-dd9dfadd19c9",
                     "path": "<Mouse>/rightButton",
-                    "interactions": "Hold",
+                    "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
                     "action": "FriendGrab",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "2fd4b00b-1a34-4c3d-8108-47724688c7dc",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FriendScroll",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "cefdb40e-a152-4878-8b7b-bceca424c21c",
+                    "path": "<Mouse>/scroll/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FriendScroll",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "18b7c637-bf26-4e95-a3b0-913fb35566dd",
+                    "path": "<Mouse>/scroll/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FriendScroll",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         },

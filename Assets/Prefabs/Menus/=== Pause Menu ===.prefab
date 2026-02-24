@@ -285,7 +285,7 @@ MonoBehaviour:
   _transitionStartTime: 0.1
   _transitionWaitTime: 0.3
   _transitionEndTime: 0.1
-  _mainMenuManager: {fileID: 1937087047060164550}
+  _menuManager: {fileID: 0}
 --- !u!114 &1937087047060164550
 MonoBehaviour:
   m_ObjectHideFlags: 0
