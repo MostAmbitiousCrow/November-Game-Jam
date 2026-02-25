@@ -75,7 +75,7 @@ public abstract class Menu_Manager : MonoBehaviour // By Samuel White
         Menu_Transition_Controller.OnTransitionWaitCompleted += ScreenClosed;
         //Main_Menu_Transition_Controller.OnTransitionCompleted +=  // Something
     }
-    private void OnDisable()
+    private void OnDestroy()
     {
         Menu_Transition_Controller.OnTransitionStarted -= ScreenOpened;
         Menu_Transition_Controller.OnTransitionWaiting -= ToggleScreen;

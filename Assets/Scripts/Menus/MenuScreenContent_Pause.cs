@@ -20,6 +20,6 @@ public class MenuScreenContent_Pause : MenuScreenContent
     [Serializable]
     public enum PauseMenuScreenTypes
     {
-        PauseScreen = 0, Settings = 1
+        PauseScreen = 0, Encyclopaedia = 1
     }
 }

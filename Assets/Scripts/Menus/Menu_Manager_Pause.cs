@@ -1,47 +1,35 @@
 using System.Linq;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 public class Menu_Manager_Pause : Menu_Manager
 {
-    public GameObject playerGO;
+    private bool _isPaused;
+
+    private InputAction _pauseAction;
+
+    private void Awake()
+    {
+        _pauseAction = InputSystem.actions["Pause"];
+    }
     private void Start()
     {
+        Menu_Transition_Controller.OnTransitionStarted += ScreenOpened;
+        Menu_Transition_Controller.OnTransitionWaiting += ToggleScreen;
+        Menu_Transition_Controller.OnTransitionWaitCompleted += ScreenClosed;
+        //Main_Menu_Transition_Controller.OnTransitionCompleted +=  // Something
+
         foreach (var item in screenDatas)
             item.ScreenRoot.SetActive(false);
 
         screenDatas[_startScreen].ScreenRoot.SetActive(true);
 
         currentScreen = _startScreen;
+        if (_eventSystem == null) _eventSystem = FindFirstObjectByType<EventSystem>();
         _eventSystem.SetSelectedGameObject(screenDatas[currentScreen].EnterButton.gameObject);
 
-
-        _canvas.gameObject.SetActive(false);
-        //GameManager.GameLogic.onGameResume += ClosePauseMenu;
-        //GameManager.GameLogic.onGamePause += ShowPauseMenu;
-    }
-
-    private void OnEnable()
-    {
-        //GameManager.GameLogic.onGameResume += ClosePauseMenu;
-        //GameManager.GameLogic.onGamePause += ShowPauseMenu;
-    }
-
-    private void OnDisable()
-    {
-        //GameManager.GameLogic.onGameResume -= ClosePauseMenu;
-        //GameManager.GameLogic.onGamePause -= ShowPauseMenu;
-    }
-
-#if UNITY_EDITOR
-
-    protected override void Validation()
-    {
-        base.Validation();
-
-        screenDatas = FindObjectsOfType<MenuScreenContent>();
-
-        // Filter to only MenuScreenContent_Pause and sort by PauseMenuScreenTypes order
+        //Filter to only MenuScreenContent_Pause and sort by PauseMenuScreenTypes order
         var sorted = screenDatas
             .OfType<MenuScreenContent_Pause>()
             .OrderBy(s => s.MainScreenTypes)
@@ -50,33 +38,67 @@ public class Menu_Manager_Pause : Menu_Manager
 
         screenDatas = sorted;
 
+        _canvas.gameObject.SetActive(false);
+
+    }
+
+    private void OnEnable()
+    {
+        _pauseAction.performed += OnPause;
+    }
+
+    private void OnDisable()
+    {
+        _pauseAction.performed -= OnPause;
+    }
+
+    private void OnPause(InputAction.CallbackContext ctx)
+    {
+        _isPaused = !_isPaused;
+        if (_isPaused) ShowPauseMenu();
+        else ClosePauseMenu();
+    }
+
+#if UNITY_EDITOR
+
+    protected override void Validation()
+    {
+        base.Validation();
+
+        screenDatas = FindObjectsByType<MenuScreenContent>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+
         if (!_audioSource) _audioSource = GetComponent<AudioSource>();
+
+        //Filter to only MenuScreenContent_Pause and sort by PauseMenuScreenTypes order
+        var sorted = screenDatas
+            .OfType<MenuScreenContent_Pause>()
+            .OrderBy(s => s.MainScreenTypes)
+            .Cast<MenuScreenContent>()
+            .ToArray();
+
+        screenDatas = sorted;
     }
 #endif
     public void Resume()
     {
-        //GameManager.GameLogic.SetPauseState(false);
         ClosePauseMenu();
     }
 
     public void QuitToMenu()
     {
-        //GameManager.SceneManager.LoadScene(MainSceneManager.GameScenes.MainMenu);
-        Application.Quit();
-        print("Quit to Menu...");
+        SceneLoader.LoadSceneRequest?.Invoke("Main Menu");
     }
 
     public void ShowPauseMenu()
     {
         _canvas.gameObject.SetActive(true);
-        playerGO.SetActive(false);
-        
+        _isPaused = true;
     }
 
     void ClosePauseMenu()
     {
         _canvas.gameObject.SetActive(false);
-        playerGO.SetActive(true);
+        _isPaused = false;
     }
 
     protected override void ToggleScreen(int openingScreen, int closingScreen)
