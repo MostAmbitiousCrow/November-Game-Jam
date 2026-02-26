@@ -7,8 +7,7 @@ using TMPro;
 public class PlayerMovement : MonoBehaviour
 {
     public SpriteRenderer friendUI;
-    private SpriteRenderer[] friendSelected;
-    private Sprite friendHeadImage;
+    [SerializeField] Sprite friendSelected;
     public float friendListSelect = 0;
     private InputSystem_Actions playerInputActions;
     [SerializeField] Rigidbody rb;
@@ -100,8 +99,9 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!Friend_Chain_Controller.instance.FriendCheck())
             return;
-
-            Character_Controller_Script selectedFriend = Friend_Chain_Controller.instance._connectedHands[(int)friendListSelect];
+        
+        //Friend to throw is based on element in a list
+        Character_Controller_Script selectedFriend = Friend_Chain_Controller.instance._connectedHands[(int)friendListSelect];
             ;//Friend_Chain_Controller.instance.GetCurrentFriend();
 
         //Reads whether the LMB is being pressed
@@ -139,8 +139,6 @@ public class PlayerMovement : MonoBehaviour
 
             //StartCoroutine(MovePlayer(power));
         }
-
-        Debug.Log(throwInput);
     }
     public void PowerCalcAndMove()
     {
@@ -167,9 +165,11 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnFScroll(InputAction.CallbackContext context)
     {
+        //Goes through list of connected friends
         float scrollInput = context.ReadValue<float>();
         friendListSelect += scrollInput;
         
+        //bounds so selected element is never under or over the list count
         if (friendListSelect < 0 && Friend_Chain_Controller.instance._connectedHands.Count > 0)
         {
             friendListSelect = Friend_Chain_Controller.instance._connectedHands.Count - 1;
@@ -190,11 +190,16 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        friendSelected = Friend_Chain_Controller.instance._connectedHands[(int)friendListSelect].gameObject.GetComponentsInChildren<SpriteRenderer>();
-        friendHeadImage = friendSelected[2].sprite;
-        friendUI.sprite = friendHeadImage;
+        //Shows friend head at bottom of screen
+        if (Friend_Chain_Controller.instance._connectedHands.Count > 0)
+        {
+            friendSelected = Friend_Chain_Controller.instance._connectedHands[(int)friendListSelect].UISprite; ;
+            friendUI.sprite = friendSelected;
+        }
+        //Removes friend head when nothing held
         if (Friend_Chain_Controller.instance._connectedHands.Count <= 0)
         {
+            friendSelected = null;
             friendUI.sprite = null;
         }
         

@@ -15,6 +15,7 @@ public abstract class Character_Controller_Script : MonoBehaviour
     [SerializeField] protected Hand_Connector _handConnector;
     [SerializeField] protected Rigidbody _rb;
     public Rigidbody Rb { get { return _rb; } }
+    public Sprite UISprite;
 
     private void FixedUpdate()
     {

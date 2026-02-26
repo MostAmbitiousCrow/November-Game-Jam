@@ -72,6 +72,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 0f07cd69a784ba74a9b0571dfcf6d077, type: 3}
+    - target: {fileID: 5581969717181998063, guid: c5eceab5fe1c5f9438db36a4baf3eeb7, type: 3}
+      propertyPath: UISprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 15cd5a3f5305ed24b9e96629fd1438b1, type: 3}
     - target: {fileID: 6068146469745436875, guid: c5eceab5fe1c5f9438db36a4baf3eeb7, type: 3}
       propertyPath: m_Sprite
       value: 
