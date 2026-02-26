@@ -118,6 +118,24 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""PlayerMoveGamepad"",
+                    ""type"": ""Value"",
+                    ""id"": ""3a56e842-e852-4940-b0dc-fe300b841cc5"",
+                    ""expectedControlType"": ""Stick"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""FriendThrowGamepad"",
+                    ""type"": ""Value"",
+                    ""id"": ""7821007c-7078-45ee-acb0-5d92be2208d3"",
+                    ""expectedControlType"": ""Stick"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -144,7 +162,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""1D Axis"",
+                    ""name"": ""Scroll Wheel"",
                     ""id"": ""2fd4b00b-1a34-4c3d-8108-47724688c7dc"",
                     ""path"": ""1DAxis"",
                     ""interactions"": """",
@@ -173,6 +191,149 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""FriendScroll"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Controller Shouldersl"",
+                    ""id"": ""8767eb20-56d0-4ed5-9a00-06c3ab4d9cf9"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FriendScroll"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""337465fb-c64c-4524-a1bc-d304ba54f888"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FriendScroll"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""7fc2d43d-6968-4f56-9f78-bc0b6eaa35a5"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FriendScroll"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""5169ffa2-b52c-4014-aed0-85b2c606676f"",
+                    ""path"": ""2DVector(mode=2)"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PlayerMoveGamepad"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""91a7b7f4-fdd0-4223-bd53-0c40645f45b6"",
+                    ""path"": ""<Gamepad>/leftStick/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""PlayerMoveGamepad"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""b4d84777-793d-4eca-922d-20ad0468362e"",
+                    ""path"": ""<Gamepad>/leftStick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""PlayerMoveGamepad"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""d5635e17-d009-4196-aa5b-b7c691f3c1ea"",
+                    ""path"": ""<Gamepad>/leftStick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""PlayerMoveGamepad"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""46f108b1-f072-49cf-b678-6219c8ff3c41"",
+                    ""path"": ""<Gamepad>/leftStick/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""PlayerMoveGamepad"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""3ce786cc-cd32-48d2-a401-bb053de3bea3"",
+                    ""path"": ""2DVector(mode=2)"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FriendThrowGamepad"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""90389bd4-abf0-4340-b8e4-fcdfb50c56aa"",
+                    ""path"": ""<Gamepad>/rightStick/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""FriendThrowGamepad"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""d39f44f5-c626-4011-9058-ff8cf408f757"",
+                    ""path"": ""<Gamepad>/rightStick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""FriendThrowGamepad"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""111b0e25-16f4-4fef-baa6-06fe51c1144a"",
+                    ""path"": ""<Gamepad>/rightStick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""FriendThrowGamepad"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""044f7756-04ed-431b-a036-e70b84cb490c"",
+                    ""path"": ""<Gamepad>/rightStick/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""FriendThrowGamepad"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 }
@@ -774,6 +935,8 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_Player_PlayerGrab = m_Player.FindAction("PlayerGrab", throwIfNotFound: true);
         m_Player_FriendGrab = m_Player.FindAction("FriendGrab", throwIfNotFound: true);
         m_Player_FriendScroll = m_Player.FindAction("FriendScroll", throwIfNotFound: true);
+        m_Player_PlayerMoveGamepad = m_Player.FindAction("PlayerMoveGamepad", throwIfNotFound: true);
+        m_Player_FriendThrowGamepad = m_Player.FindAction("FriendThrowGamepad", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -870,6 +1033,8 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_PlayerGrab;
     private readonly InputAction m_Player_FriendGrab;
     private readonly InputAction m_Player_FriendScroll;
+    private readonly InputAction m_Player_PlayerMoveGamepad;
+    private readonly InputAction m_Player_FriendThrowGamepad;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -893,6 +1058,14 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/FriendScroll".
         /// </summary>
         public InputAction @FriendScroll => m_Wrapper.m_Player_FriendScroll;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/PlayerMoveGamepad".
+        /// </summary>
+        public InputAction @PlayerMoveGamepad => m_Wrapper.m_Player_PlayerMoveGamepad;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/FriendThrowGamepad".
+        /// </summary>
+        public InputAction @FriendThrowGamepad => m_Wrapper.m_Player_FriendThrowGamepad;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -928,6 +1101,12 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @FriendScroll.started += instance.OnFriendScroll;
             @FriendScroll.performed += instance.OnFriendScroll;
             @FriendScroll.canceled += instance.OnFriendScroll;
+            @PlayerMoveGamepad.started += instance.OnPlayerMoveGamepad;
+            @PlayerMoveGamepad.performed += instance.OnPlayerMoveGamepad;
+            @PlayerMoveGamepad.canceled += instance.OnPlayerMoveGamepad;
+            @FriendThrowGamepad.started += instance.OnFriendThrowGamepad;
+            @FriendThrowGamepad.performed += instance.OnFriendThrowGamepad;
+            @FriendThrowGamepad.canceled += instance.OnFriendThrowGamepad;
         }
 
         /// <summary>
@@ -948,6 +1127,12 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @FriendScroll.started -= instance.OnFriendScroll;
             @FriendScroll.performed -= instance.OnFriendScroll;
             @FriendScroll.canceled -= instance.OnFriendScroll;
+            @PlayerMoveGamepad.started -= instance.OnPlayerMoveGamepad;
+            @PlayerMoveGamepad.performed -= instance.OnPlayerMoveGamepad;
+            @PlayerMoveGamepad.canceled -= instance.OnPlayerMoveGamepad;
+            @FriendThrowGamepad.started -= instance.OnFriendThrowGamepad;
+            @FriendThrowGamepad.performed -= instance.OnFriendThrowGamepad;
+            @FriendThrowGamepad.canceled -= instance.OnFriendThrowGamepad;
         }
 
         /// <summary>
@@ -1269,6 +1454,20 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnFriendScroll(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "PlayerMoveGamepad" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnPlayerMoveGamepad(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "FriendThrowGamepad" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnFriendThrowGamepad(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.
