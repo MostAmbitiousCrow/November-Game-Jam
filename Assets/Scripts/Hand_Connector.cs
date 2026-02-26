@@ -1,6 +1,5 @@
 using CarterGames.Assets.AudioManager;
 using UnityEngine;
-using UnityEngine.XR;
 
 public class Hand_Connector : MonoBehaviour
 {
