@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cddf41ef7e235b4694005919d6abb35, type: 3}
+  m_Name: Encyclopaedia Content (Lion)
+  m_EditorClassIdentifier: 
+  friendIcon: {fileID: 21300000, guid: ed7d4d504597a2542adc3b3598f68998, type: 3}
+  friendName: Angus
+  friendDescription: This is Angus, a strong and stoic lion who struggles with socialising
+    with other people. He finds fitting in with people difficult and often keeps
+    himself to himself, but with Glorp and Friends he feels seen and understood making
+    him feel like he belongs!

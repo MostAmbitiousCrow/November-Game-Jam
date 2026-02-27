@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cddf41ef7e235b4694005919d6abb35, type: 3}
+  m_Name: Encyclopaedia Content (Dog)
+  m_EditorClassIdentifier: 
+  friendIcon: {fileID: 21300000, guid: b1c09c3fdfe251541a043fcaa827336a, type: 3}
+  friendName: Princess
+  friendDescription: This is Princess, named after her beauty, and she is a very
+    good girl! Living a pampered life with all the fuss and biscuits she could ever
+    want, she has set off to find the fabled bone every dog speaks of. It is buried
+    somewhere and she is determined to find it!

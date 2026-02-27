@@ -665,8 +665,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentPage: 0
   pages:
+  - {fileID: 11400000, guid: a8c5ef38a4ef70e44936fe21d0babba4, type: 2}
+  - {fileID: 11400000, guid: e96690ba39a9f8a4186888bd3944e2ad, type: 2}
   - {fileID: 11400000, guid: bae24ace28a4afb43820b9035434497c, type: 2}
+  - {fileID: 11400000, guid: d0b6ca78cc32c8a48b1677faa652bf8b, type: 2}
+  - {fileID: 11400000, guid: f4d518f7fe0fe6441872357605da0f94, type: 2}
+  - {fileID: 11400000, guid: 5a56a271d4434e44ab3564e5f6e18a58, type: 2}
   - {fileID: 11400000, guid: 3350412ad7a13194d8eda4e4f439e726, type: 2}
+  - {fileID: 11400000, guid: 6e8982484dd34a546bafb7b0798d8d71, type: 2}
+  - {fileID: 11400000, guid: cb2ea0ef32d931c44bd5c98402aaa8e9, type: 2}
+  - {fileID: 11400000, guid: 070c6d8a4539c3f4d9c3dcc6f5bb2ed9, type: 2}
+  - {fileID: 11400000, guid: c1c8c30c4d04b2c44869eb00b835802a, type: 2}
   onExit:
     m_PersistentCalls:
       m_Calls: []
@@ -1747,7 +1756,7 @@ MonoBehaviour:
   m_fontSize: 92
   m_fontSizeBase: 92
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
