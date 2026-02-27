@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public class Friend_Chain_Controller : MonoBehaviour
 {
     public static Friend_Chain_Controller instance;
-    [SerializeField] List<Character_Controller_Script> _connectedHands;
+    [SerializeField]  public List<Character_Controller_Script> _connectedHands;
 
     private void Awake()
     {
