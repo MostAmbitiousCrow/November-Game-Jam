@@ -93,6 +93,7 @@ public class EncyclopaediaController : MonoBehaviour
         var pageContent = pages[id];
         friendIcon.sprite = pageContent.friendIcon;
         friendNameText.text = pageContent.friendName;
-        friendDescriptionText.text = pageContent.friendDescription;
+        if (friendDescriptionText.text != null)
+            friendDescriptionText.text = pageContent.friendDescription;
     }
 }

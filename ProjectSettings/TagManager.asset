@@ -17,7 +17,7 @@ TagManager:
   - Obstacle
   - Friend
   - Clickable
-  - 
+  - Detectable
   - 
   - 
   - 
@@ -40,8 +40,14 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 848168251
+    locked: 0
   - name: Bottom
     uniqueID: 3952741027
+    locked: 0
+  - name: Obstacle
+    uniqueID: 1047815159
     locked: 0
   - name: Default
     uniqueID: 0

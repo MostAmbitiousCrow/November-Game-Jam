@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cddf41ef7e235b4694005919d6abb35, type: 3}
+  m_Name: Encyclopaedia Content (Rabbit)
+  m_EditorClassIdentifier: 
+  friendIcon: {fileID: 21300000, guid: 59ce93b9e638f3741b0e3a5d15d065a2, type: 3}
+  friendName: Daisy
+  friendDescription: This is Daisy the purple rabbit and despite what her cute name
+    suggests, she is feisty and quick to anger resulting in her stomping her feet
+    in a temper tantrum. However, when she spends time with her friends, she is a
+    lot calmer. She is very fluffy too!
