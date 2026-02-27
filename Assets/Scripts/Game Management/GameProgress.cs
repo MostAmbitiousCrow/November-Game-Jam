@@ -26,13 +26,13 @@ public static class GameProgress
 
     public static void ResetCompletedLevels()
     {
-        for (int i = 1; i <= 10; i++) PlayerPrefs.SetInt($"Level{i}Complete", 0);
+        for (int i = 0; i <= 10; i++) PlayerPrefs.SetInt($"Level{i}Complete", 0);
         Debug.Log("All levels marked as incomplete.");
     }
 
     public static void AchieveLevels()
     {
-        for (int i = 1; i <= 10; i++) UpdateCompletedLevel(i);
+        for (int i = 0; i <= 10; i++) UpdateCompletedLevel(i);
         Debug.Log("All levels marked as completed.");
     }
 

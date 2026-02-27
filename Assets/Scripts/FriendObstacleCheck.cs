@@ -14,11 +14,11 @@ public class FriendObstacleCheck : MonoBehaviour
     
     //Script goes on obstacle
     //When a friend triggers it, check if the current friend type matches the friend needed
-    void OnTriggerEnter(Collider other)
+    void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.CompareTag("Friend"))
+        if (other.gameObject.CompareTag("Friend"))
         {
-            var friend = other.GetComponent<NewFriendController>();
+            var friend = other.gameObject.GetComponent<NewFriendController>();
             if (_friendRoleRequirement == friend.Role)
             {
                 Debug.Log("Correct Friend");

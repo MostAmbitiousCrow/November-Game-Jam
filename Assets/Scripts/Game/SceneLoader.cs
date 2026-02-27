@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using CarterGames.Assets.AudioManager;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -69,6 +70,7 @@ public class SceneLoader : MonoBehaviour
     {
         IsLoadingScene = true;
         SceneLoadTransitionStarted?.Invoke();
+        AudioManager.Play(Clip.SceneTransitionOpening);
 
         yield return new WaitForSeconds(startTransitionTime);
 
@@ -80,6 +82,7 @@ public class SceneLoader : MonoBehaviour
         yield return new WaitForSeconds(.5f);
         SceneLoadFinished?.Invoke();
 
+        AudioManager.Play(Clip.SceneTransitionClose);
         yield return new WaitForSeconds(endTransitionTime);
 
         SceneLoadTransitionEnded?.Invoke();

@@ -441,7 +441,7 @@ MonoBehaviour:
           option: 1
           tabPos: 1
         defaultSettings:
-          volume: 1
+          volume: 0.65
           pitch: 1
         showDynamicTime: 0
         metaData:

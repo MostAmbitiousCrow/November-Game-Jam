@@ -5,10 +5,778 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8fa09a9-1a68-45a9-a127-a7075d2237b2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.November-Game-Jam/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.November-Game-Jam/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.November-Game-Jam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.November-Game-Jam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Input/InputSystem_Actions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input/InputSystem_Actions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Input/InputSystem_Actions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input/InputSystem_Actions.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Carter Games/Audio Manager/Data/[Audio Manager] Audio Library Asset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Carter Games/Audio Manager/Data/[Audio Manager] Audio Library Asset.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Menus/=== Main Menu ===.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Menus/=== Main Menu ===.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Menus/Level Select/Level Item.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Menus/Level Select/Level Item.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Obstacles/Farmer Obstacle Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Obstacles/Farmer Obstacle Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Obstacles/Obstacle Root.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Obstacles/Obstacle Root.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level Scene Template Asset.scenetemplate" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level Scene Template Asset.scenetemplate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level Select.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level Select.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/=== Pause Menu ===.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/=== Pause Menu ===.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Alien Deer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Alien Deer.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Asteroid Border_0_0.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Asteroid Border_0_0.PNG.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Asteroid Border_0_1.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Asteroid Border_0_1.PNG.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Asteroid Border_0_2.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Asteroid Border_0_2.PNG.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Astroid Border Tile 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Astroid Border Tile 4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Back.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Background4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Background4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Bowtie Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Bowtie Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Bowtie.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Bowtie.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Butterfly Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Butterfly Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Butterfly.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Butterfly.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Circle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Circle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Cloud Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Cloud Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Cloud.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Cloud.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Cross Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Cross Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Cross.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Cross.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Cupcake Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Cupcake Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Cupcake.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Cupcake.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Deer Friend Variant.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Deer Friend Variant.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Deer Head.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Deer Head.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Deer Left Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Deer Left Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Deer Left Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Deer Left Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Deer Right Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Deer Right Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Deer Right Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Deer Right Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Deer Torso.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Deer Torso.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Diamond Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Diamond Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Diamond.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Diamond.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Dog Friend.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Dog Friend.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Dog Friend.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Dog Friend.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Dog Head.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Dog Head.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Dog Left Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Dog Left Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Dog Left Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Dog Left Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Dog Right Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Dog Right Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Dog Right Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Dog Right Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Dog Torso.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Dog Torso.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Elephant Friend.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Elephant Friend.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Elephant Friend.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Elephant Friend.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Elephant Head.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Elephant Head.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Elephant Left Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Elephant Left Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Elephant Left Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Elephant Left Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Elephant Right Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Elephant Right Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Elephant Right Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Elephant Right Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Elephant Torso.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Elephant Torso.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Farmer Obstacle Variant.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Farmer Obstacle Variant.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Fish Friend Variant.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Fish Friend Variant.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Fish Friend.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Fish Friend.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Fish Head.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Fish Head.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Fish Left Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Fish Left Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Fish Left Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Fish Left Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Fish Right Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Fish Right Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Fish Right Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Fish Right Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Fish Torso.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Fish Torso.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Friend Detect Obstacle.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Friend Detect Obstacle.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/FriendUI.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/FriendUI.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Front.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Front.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Gemstone.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Gemstone.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Gemstone.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Gemstone.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Glorp Head.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Glorp Head.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Glorp Left Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Glorp Left Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Glorp Left Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Glorp Left Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Glorp Right Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Glorp Right Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Glorp Right Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Glorp Right Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Glorp Torso.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Glorp Torso.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Heart Group Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Heart Group Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Heart Group.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Heart Group.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Heart Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Heart Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Heart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Heart.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Icecream Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Icecream Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Icecream.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Icecream.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Letter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Letter.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Letter.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Letter.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Lion Friend Variant.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Lion Friend Variant.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Lion Friend.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Lion Friend.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Lion Head.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Lion Head.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Lion Left Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Lion Left Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Lion Left Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Lion Left Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Lion Right Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Lion Right Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Lion Right Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Lion Right Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Lion Torso.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Lion Torso.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Lit.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Lit.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Lizard Friend Variant.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Lizard Friend Variant.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Lizard Friend.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Lizard Friend.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Lizard Head.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Lizard Head.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Lizard Left Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Lizard Left Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Lizard Left Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Lizard Left Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Lizard Right Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Lizard Right Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Lizard Right Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Lizard Right Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Lizard Torso.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Lizard Torso.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Lumberjack Obstacle Variant.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Lumberjack Obstacle Variant.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Meow Meow Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Meow Meow Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Meow Meow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Meow Meow.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Meteriots.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Meteriots.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Meteriots_low.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Meteriots_low.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Meteriots_low_Meteriots_BaseMap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Meteriots_low_Meteriots_BaseMap.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Meteriots_low_Meteriots_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Meteriots_low_Meteriots_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Miner Obstacle Variant.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Miner Obstacle Variant.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Moon Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Moon Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Moon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Moon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Music Note Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Music Note Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Music Note.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Music Note.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/New Friend.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/New Friend.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/New Material.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/New Material.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/No Background.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/No Background.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Objective Manager.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Objective Manager.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Obstacle Root.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Obstacle Root.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Owl Friend Variant.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Owl Friend Variant.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Owl Friend.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Owl Friend.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Owl Head.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Owl Head.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Owl Left Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Owl Left Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Owl Left Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Owl Left Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Owl Right Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Owl Right Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Owl Right Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Owl Right Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Owl Torso.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Owl Torso.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/ParticlesUnlit.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/ParticlesUnlit.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Pill Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Pill Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Pill.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Pill.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Pizza Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Pizza Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Pizza.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Pizza.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Planet Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Planet Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Planet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Planet.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Player.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Player.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Rabbit Friend Variant.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Rabbit Friend Variant.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Rabbit Friend.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Rabbit Friend.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Rabbit Head.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Rabbit Head.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Rabbit Left Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Rabbit Left Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Rabbit Left Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Rabbit Left Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Rabbit Right Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Rabbit Right Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Rabbit Right Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Rabbit Right Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Rabbit Torso.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Rabbit Torso.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Scene Return Listener.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Scene Return Listener.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Seashell Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Seashell Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Seashell.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Seashell.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Sheep Friend Variant.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Sheep Friend Variant.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Sheep Friend.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Sheep Friend.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Sheep Head.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Sheep Head.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Sheep Left Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Sheep Left Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Sheep Left Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Sheep Left Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Sheep Right Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Sheep Right Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Sheep Right Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Sheep Right Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Sheep Torso.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Sheep Torso.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Shooting Star Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Shooting Star Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Shooting Star.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Shooting Star.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Space Nettle Particle Brown.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Space Nettle Particle Brown.PNG.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Space Nettle Particle Cold.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Space Nettle Particle Cold.PNG.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Space Nettle Particle Purple.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Space Nettle Particle Purple.PNG.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Space Nettle Particle Warm.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Space Nettle Particle Warm.PNG.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Space Rock Desert Particle.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Space Rock Desert Particle.PNG.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Space_Nettle_Particle_Material.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Space_Nettle_Particle_Material.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Space_Rock_Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Space_Rock_Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Sparkle Group Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Sparkle Group Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Sparkle Group.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Sparkle Group.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Sparkle Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Sparkle Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Sparkle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Sparkle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Spiral Thick Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Spiral Thick Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Spiral Thin Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Spiral Thin Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Spiral Thin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Spiral Thin.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Sprial Thick.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Sprial Thick.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Sprite Shape Corner.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Sprite Shape Corner.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Sprite-Unlit-Default.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Sprite-Unlit-Default.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Square.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Square.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Star Angle Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Star Angle Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Star Angle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Star Angle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Star Jump Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Star Jump Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Star Jump.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Star Jump.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Star Lean Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Star Lean Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Star Lean.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Star Lean.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Stone_2Low_standardSurface1_BaseMap.1001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Stone_2Low_standardSurface1_BaseMap.1001.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Stone_2Low_standardSurface1_Emissive.1001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Stone_2Low_standardSurface1_Emissive.1001.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Stone_2Low_standardSurface1_MaskMap.1001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Stone_2Low_standardSurface1_MaskMap.1001.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Stone_2Low_standardSurface1_Normal.1001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Stone_2Low_standardSurface1_Normal.1001.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Sun Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Sun Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Sun.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Sun.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/TitleScreen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/TitleScreen.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Woodpecker Friend Variant.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Woodpecker Friend Variant.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Woodpecker Friend.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Woodpecker Friend.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Woodpecker Head.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Woodpecker Head.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Woodpecker Left Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Woodpecker Left Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Woodpecker Left Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Woodpecker Left Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Woodpecker Right Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Woodpecker Right Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Woodpecker Right Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Woodpecker Right Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Woodpecker Torso.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/Woodpecker Torso.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/blinn2.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/blinn2.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/roots_low.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/roots_low.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/roots_low_blinn2_BaseMap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/roots_low_blinn2_BaseMap.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/roots_low_blinn2_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-1/roots_low_blinn2_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/=== Pause Menu ===.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/=== Pause Menu ===.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Alien Deer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Alien Deer.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Asteroid Border_0_0.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Asteroid Border_0_0.PNG.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Asteroid Border_0_1.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Asteroid Border_0_1.PNG.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Asteroid Border_0_2.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Asteroid Border_0_2.PNG.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Asteroid Border_1_0.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Asteroid Border_1_0.PNG.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Astroid Border Tile 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Astroid Border Tile 4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Back.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Background4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Background4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Bowtie Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Bowtie Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Bowtie.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Bowtie.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Butterfly Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Butterfly Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Butterfly.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Butterfly.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Circle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Circle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Cloud Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Cloud Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Cloud.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Cloud.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Cross Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Cross Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Cross.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Cross.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Cupcake Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Cupcake Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Cupcake.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Cupcake.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Deer Friend Variant.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Deer Friend Variant.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Deer Head.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Deer Head.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Deer Left Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Deer Left Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Deer Left Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Deer Left Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Deer Right Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Deer Right Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Deer Right Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Deer Right Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Deer Torso.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Deer Torso.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Diamond Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Diamond Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Diamond.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Diamond.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Dog Friend.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Dog Friend.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Dog Friend.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Dog Friend.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Dog Head.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Dog Head.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Dog Left Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Dog Left Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Dog Left Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Dog Left Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Dog Right Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Dog Right Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Dog Right Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Dog Right Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Dog Torso.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Dog Torso.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Elephant Friend.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Elephant Friend.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Elephant Friend.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Elephant Friend.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Elephant Head.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Elephant Head.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Elephant Left Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Elephant Left Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Elephant Left Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Elephant Left Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Elephant Right Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Elephant Right Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Elephant Right Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Elephant Right Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Elephant Torso.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Elephant Torso.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Farmer Obstacle Variant.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Farmer Obstacle Variant.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Fish Friend Variant.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Fish Friend Variant.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Fish Friend.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Fish Friend.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Fish Head.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Fish Head.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Fish Left Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Fish Left Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Fish Left Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Fish Left Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Fish Right Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Fish Right Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Fish Right Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Fish Right Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Fish Torso.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Fish Torso.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Friend Detect Obstacle.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Friend Detect Obstacle.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/FriendUI.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/FriendUI.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Front.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Front.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Gemstone.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Gemstone.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Gemstone.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Gemstone.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Glorp Head.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Glorp Head.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Glorp Left Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Glorp Left Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Glorp Left Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Glorp Left Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Glorp Right Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Glorp Right Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Glorp Right Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Glorp Right Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Glorp Torso.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Glorp Torso.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Heart Group Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Heart Group Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Heart Group.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Heart Group.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Heart Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Heart Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Heart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Heart.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Icecream Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Icecream Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Icecream.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Icecream.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Letter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Letter.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Letter.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Letter.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Lion Friend Variant.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Lion Friend Variant.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Lion Friend.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Lion Friend.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Lion Head.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Lion Head.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Lion Left Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Lion Left Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Lion Left Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Lion Left Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Lion Right Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Lion Right Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Lion Right Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Lion Right Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Lion Torso.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Lion Torso.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Lit.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Lit.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Lizard Friend Variant.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Lizard Friend Variant.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Lizard Friend.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Lizard Friend.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Lizard Head.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Lizard Head.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Lizard Left Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Lizard Left Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Lizard Left Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Lizard Left Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Lizard Right Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Lizard Right Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Lizard Right Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Lizard Right Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Lizard Torso.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Lizard Torso.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Lumberjack Obstacle Variant.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Lumberjack Obstacle Variant.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Meow Meow Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Meow Meow Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Meow Meow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Meow Meow.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Meteriots.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Meteriots.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Meteriots_low.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Meteriots_low.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Meteriots_low_Meteriots_BaseMap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Meteriots_low_Meteriots_BaseMap.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Meteriots_low_Meteriots_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Meteriots_low_Meteriots_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Miner Obstacle Variant.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Miner Obstacle Variant.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Moon Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Moon Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Moon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Moon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Music Note Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Music Note Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Music Note.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Music Note.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/New Friend.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/New Friend.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/New Material.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/New Material.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/No Background.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/No Background.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Objective Manager.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Objective Manager.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Obstacle Root.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Obstacle Root.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Owl Friend Variant.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Owl Friend Variant.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Owl Friend.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Owl Friend.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Owl Head.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Owl Head.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Owl Left Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Owl Left Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Owl Left Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Owl Left Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Owl Right Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Owl Right Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Owl Right Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Owl Right Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Owl Torso.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Owl Torso.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/ParticlesUnlit.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/ParticlesUnlit.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Pill Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Pill Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Pill.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Pill.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Pizza Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Pizza Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Pizza.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Pizza.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Planet (1).prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Planet (1).prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Planet Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Planet Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Planet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Planet.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Planet1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Planet1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Player.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Player.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Rabbit Friend Variant.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Rabbit Friend Variant.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Rabbit Friend.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Rabbit Friend.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Rabbit Head.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Rabbit Head.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Rabbit Left Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Rabbit Left Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Rabbit Left Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Rabbit Left Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Rabbit Right Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Rabbit Right Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Rabbit Right Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Rabbit Right Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Rabbit Torso.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Rabbit Torso.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Scene Return Listener.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Scene Return Listener.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Seashell Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Seashell Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Seashell.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Seashell.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Sheep Friend Variant.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Sheep Friend Variant.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Sheep Friend.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Sheep Friend.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Sheep Head.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Sheep Head.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Sheep Left Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Sheep Left Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Sheep Left Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Sheep Left Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Sheep Right Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Sheep Right Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Sheep Right Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Sheep Right Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Sheep Torso.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Sheep Torso.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Shooting Star Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Shooting Star Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Shooting Star.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Shooting Star.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Space Nettle Particle Brown.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Space Nettle Particle Brown.PNG.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Space Nettle Particle Cold.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Space Nettle Particle Cold.PNG.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Space Nettle Particle Purple.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Space Nettle Particle Purple.PNG.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Space Nettle Particle Warm.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Space Nettle Particle Warm.PNG.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Space Rock Desert Particle.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Space Rock Desert Particle.PNG.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Space_Nettle_Particle_Material.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Space_Nettle_Particle_Material.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Space_Rock_Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Space_Rock_Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Sparkle Group Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Sparkle Group Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Sparkle Group.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Sparkle Group.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Sparkle Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Sparkle Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Sparkle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Sparkle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Spiral Thick Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Spiral Thick Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Spiral Thin Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Spiral Thin Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Spiral Thin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Spiral Thin.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Sprial Thick.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Sprial Thick.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Sprite Shape Corner.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Sprite Shape Corner.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Sprite-Unlit-Default.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Sprite-Unlit-Default.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Square.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Square.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Star Angle Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Star Angle Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Star Angle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Star Angle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Star Jump Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Star Jump Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Star Jump.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Star Jump.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Star Lean Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Star Lean Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Star Lean.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Star Lean.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Stone_2Low_standardSurface1_BaseMap.1001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Stone_2Low_standardSurface1_BaseMap.1001.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Stone_2Low_standardSurface1_Emissive.1001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Stone_2Low_standardSurface1_Emissive.1001.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Stone_2Low_standardSurface1_MaskMap.1001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Stone_2Low_standardSurface1_MaskMap.1001.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Stone_2Low_standardSurface1_Normal.1001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Stone_2Low_standardSurface1_Normal.1001.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Sun Particle.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Sun Particle.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Sun.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Sun.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/TitleScreen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/TitleScreen.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Woodpecker Friend Variant.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Woodpecker Friend Variant.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Woodpecker Friend.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Woodpecker Friend.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Woodpecker Head.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Woodpecker Head.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Woodpecker Left Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Woodpecker Left Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Woodpecker Left Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Woodpecker Left Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Woodpecker Right Arm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Woodpecker Right Arm.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Woodpecker Right Leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Woodpecker Right Leg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Woodpecker Torso.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/Woodpecker Torso.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/blinn2.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/blinn2.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/roots_low.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/roots_low.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/roots_low_blinn2_BaseMap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/roots_low_blinn2_BaseMap.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/roots_low_blinn2_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Level-2/roots_low_blinn2_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Main Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Scenes/Main Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FriendObstacleCheck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FriendObstacleCheck.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game Management/GameProgress.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game Management/GameProgress.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/SceneLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/SceneLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menus/Encyclopaedia/EncyclopaediaController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menus/Encyclopaedia/EncyclopaediaController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menus/Menu_Manager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menus/Menu_Manager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menus/Menu_Manager_Pause.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menus/Menu_Manager_Pause.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Planet_Script.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Planet_Script.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +809,9 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;New__Friend__Throw&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -52,11 +822,13 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/../The-Little-Glorp\November Game Jam.exe" />
+      <option name="EXE_PATH" value="$USER_HOME$/Downloads/Game Builds/Fart\The Little Glorp.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="D:\University\The-Little-Glorp" />
       <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="ENV_FILE_PATHS" value="" />
+      <option name="REDIRECT_INPUT_PATH" value="" />
+      <option name="MIXED_MODE_DEBUG" value="0" />
       <method v="2" />
     </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
@@ -64,7 +836,9 @@
       <option name="PROGRAM_PARAMETERS" value="-projectPath D:\University\November-Game-Jam -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\University\November-Game-Jam" />
       <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="ENV_FILE_PATHS" value="" />
+      <option name="REDIRECT_INPUT_PATH" value="" />
+      <option name="MIXED_MODE_DEBUG" value="0" />
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
@@ -72,10 +846,12 @@
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath D:\University\November-Game-Jam -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\University\November-Game-Jam" />
       <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="ENV_FILE_PATHS" value="" />
+      <option name="REDIRECT_INPUT_PATH" value="" />
+      <option name="MIXED_MODE_DEBUG" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
@@ -88,7 +864,7 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
@@ -99,6 +875,9 @@
       <option name="selectedOptions">
         <list />
       </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to" type="UnityDevicePlayer" factoryName="UnityAttachToDevicePlayer">
       <method v="2" />
     </configuration>
   </component>
@@ -123,6 +902,8 @@
       <workItem from="1771954810755" duration="606000" />
       <workItem from="1771955436407" duration="9494000" />
       <workItem from="1772119128357" duration="9176000" />
+      <workItem from="1772219934289" duration="536000" />
+      <workItem from="1772220858296" duration="2566000" />
     </task>
     <servers />
   </component>
@@ -138,5 +919,23 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.Tasks.TaskCanceledException" breakIfHandledByOtherCode="false" displayValue="System.Threading.Tasks.TaskCanceledException" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

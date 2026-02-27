@@ -20,7 +20,7 @@ public class Planet_Script : MonoBehaviour
         RotatePlanet();
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Friend"))
         {

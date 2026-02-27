@@ -4996,6 +4996,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Farmer Obstacle Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4975898486599885553, guid: 78fd3170941bd5a4386f03d1188a563f, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4975898486599885553, guid: 78fd3170941bd5a4386f03d1188a563f, type: 3}
+      propertyPath: m_Size.y
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 7415486117856309614, guid: 78fd3170941bd5a4386f03d1188a563f, type: 3}
       propertyPath: _friendRoleRequirement
       value: 1

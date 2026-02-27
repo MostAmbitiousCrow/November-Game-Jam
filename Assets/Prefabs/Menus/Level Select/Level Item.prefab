@@ -138,8 +138,8 @@ MonoBehaviour:
   isLocked: 0
   ID: 0
   levelSceneName: 
-  completedSprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  incompleteSprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+  completedSprite: {fileID: 21300000, guid: c3623760cfb7109429f908f644a7b5be, type: 3}
+  incompleteSprite: {fileID: 21300000, guid: 6ee4a27ae251aa04b98d7f77dbc35dfa, type: 3}
 --- !u!95 &4265883467680383056
 Animator:
   serializedVersion: 7

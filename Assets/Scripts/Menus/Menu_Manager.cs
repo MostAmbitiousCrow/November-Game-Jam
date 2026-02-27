@@ -1,8 +1,9 @@
+using CarterGames.Assets.AudioManager;
 using EditorAttributes;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-[RequireComponent(typeof(AudioSource))]
+[RequireComponent(typeof(InspectorAudioClipPlayer))]
 [RequireComponent(typeof(Menu_Transition_Controller))]
 public abstract class Menu_Manager : MonoBehaviour // By Samuel White
 {
@@ -33,7 +34,7 @@ public abstract class Menu_Manager : MonoBehaviour // By Samuel White
     #region Variables
     [Header("Components")]
     [SerializeField] protected EventSystem _eventSystem;
-    [SerializeField] protected AudioSource _audioSource;
+    [SerializeField] protected InspectorAudioClipPlayer _audioSource;
     [SerializeField] protected Canvas _canvas;
 
     [Header("Transition Components")]
@@ -49,6 +50,7 @@ public abstract class Menu_Manager : MonoBehaviour // By Samuel White
 
     private void Start()
     {
+        screenDatas = null;
         SortScreens();
 
         Menu_Transition_Controller.OnTransitionStarted += ScreenOpened;
@@ -57,7 +59,6 @@ public abstract class Menu_Manager : MonoBehaviour // By Samuel White
         //Main_Menu_Transition_Controller.OnTransitionCompleted +=  // Something
 
         _eventSystem = FindFirstObjectByType<EventSystem>();
-        EventSystem.current = _eventSystem;
 
         foreach (var item in screenDatas)
             item.ScreenRoot.SetActive(false);
@@ -101,17 +102,18 @@ public abstract class Menu_Manager : MonoBehaviour // By Samuel White
     protected void ScreenOpened(int screen)
     {
         MenuScreenContent sd = screenDatas[currentScreen];
-        if (sd.EnterSFX) _audioSource.PlayOneShot(sd.EnterSFX);
+        _audioSource.Play();
         ToggleInput(false);
         sd.TriggerEvent.Invoke();
     }
 
     protected void ScreenClosed(int screen)
     {
-        MenuScreenContent sd =  screenDatas[currentScreen];
-        if (sd.ExitSFX) _audioSource.PlayOneShot(sd.ExitSFX);
-        ToggleInput(true);
         currentScreen = screen;
+        MenuScreenContent sd =  screenDatas[currentScreen];
+        ToggleInput(true);
+
+        if (sd != null) _eventSystem.SetSelectedGameObject(sd.EnterButton.gameObject);
     }
 
     public abstract void SortScreens();
