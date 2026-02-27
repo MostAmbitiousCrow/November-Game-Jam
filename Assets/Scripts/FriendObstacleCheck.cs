@@ -18,7 +18,7 @@ public class FriendObstacleCheck : MonoBehaviour
     {
         if (other.CompareTag("Friend"))
         {
-            var friend = other.GetComponent<Friend_Controller>();
+            var friend = other.GetComponent<NewFriendController>();
             if (_friendRoleRequirement == friend.Role)
             {
                 Debug.Log("Correct Friend");

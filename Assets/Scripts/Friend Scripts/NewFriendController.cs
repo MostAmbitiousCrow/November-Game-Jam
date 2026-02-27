@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -11,6 +12,11 @@ public class NewFriendController : MonoBehaviour
     [SerializeField] protected float _detectRange = 5f;
     [SerializeField] protected LayerMask _playerMask;
     public Rigidbody2D Rb { get; private set; }
+
+    [Space]
+    [SerializeField] protected FriendRole role;
+    public FriendRole Role { get { return role; } }
+    public Sprite UISprite;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,10 +34,10 @@ public class NewFriendController : MonoBehaviour
     {
         if (_isConnected || !_canConnect) return;
 
-        Collider[] hitColliders = Physics.OverlapSphere(transform.position, _detectRange, _playerMask);
+        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, _detectRange, _playerMask);
         if (hitColliders.Length > 0)
         {
-            Collider col = hitColliders[0];
+            Collider2D col = hitColliders[0];
             if (hitColliders[0].CompareTag("Player"))
             {
                 print($"{col.name} Hit");
@@ -46,11 +52,39 @@ public class NewFriendController : MonoBehaviour
     public void PlayerDetected()
     {
         fcc.AddFriend(this);
+    }
 
+    public virtual void OnThrown()
+    {
+        fcc.RemoveFriend(this);
+        _isConnected = false;
+        ID = 0;
+        StartCoroutine(ChainCooldown());
+    }
+
+    protected IEnumerator ChainCooldown()
+    {
+        print("Thrown");
+        _canConnect = false;
+        yield return new WaitForSeconds(2f);
+        _canConnect = true;
+    }
+
+
+    public void AttatchToPlanetPoint(Transform point)
+    {
+        _isConnected = true;
+
+        //TODO: Add to planet's friend list
     }
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, _detectRange);
     }
+}
+
+public enum FriendRole
+{
+    NoRole, Farmer, Miner, Lumberjack
 }
