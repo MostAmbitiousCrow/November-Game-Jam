@@ -2,21 +2,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using CarterGames.Assets.AudioManager;
-using Microsoft.Unity.VisualStudio.Editor;
-using TMPro;
-using UnityEngine.InputSystem.LowLevel;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public SpriteRenderer friendUI;
+    public Image friendUI;
     private Sprite friendSelected;
     [SerializeField] GameObject gamepadCursor;
     [SerializeField] List<Vector2> lastPosList;
     [SerializeField] List<Vector2> friendPosList;
     public float friendListSelect = 0;
     private InputSystem_Actions playerInputActions;
-    [SerializeField] Rigidbody rb;
-    Vector3 throwInput;
+    [SerializeField] Rigidbody2D rb;
     Vector3 mousePos;
     [SerializeField] Vector3 _playerMoveDirection, _friendMovedirection;
 
@@ -31,19 +28,21 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] LineRenderer _playerArrowRenderer, _friendArrowRenderer;
 
     [Header("Components")]
-    [SerializeField] Hand_Connector _currentHandConnector;
-    [SerializeField] Hand_Connector _thisHandConnector;
-    public Hand_Connector HandConnector { get { return _thisHandConnector; } }
     [SerializeField] ParticleSystem _jetpackParticles;
+    NewFriendChainController friendChainController;
 
-    public Menu_Manager_Pause pauseMenu;
+    //public Menu_Manager_Pause pauseMenu;
     [Header("Audio")]
     [SerializeField] InspectorAudioClipPlayer _projectSound;
 
-    void Start()
+    private void Awake()
     {
-        if (_currentHandConnector) _currentHandConnector.AssignConnectedHand(_thisHandConnector);
+        if (friendChainController == null) friendChainController = GetComponent<NewFriendChainController>();
+
+        if (friendUI == null) friendUI = GameObject.Find("FriendSelectImage").GetComponent<Image>();
+        friendUI.enabled = false;
     }
+
     void OnEnable()
     {
         playerInputActions = new();
@@ -109,12 +108,11 @@ public class PlayerMovement : MonoBehaviour
         }
     }
     public void OnFGrab(InputAction.CallbackContext context)
-    {
-        if (!Friend_Chain_Controller.instance.FriendCheck())
-            return;
-        
+    {   
+        if (friendChainController.connectedFriends.Length < 1) return;
+
         //Friend to throw is based on element in a list
-        Character_Controller_Script selectedFriend = Friend_Chain_Controller.instance._connectedHands[(int)friendListSelect];
+        var selectedFriend = friendChainController.connectedFriends[(int)friendListSelect];
             ;//Friend_Chain_Controller.instance.GetCurrentFriend();
 
         //Reads whether the LMB is being pressed
@@ -157,20 +155,20 @@ public class PlayerMovement : MonoBehaviour
     {
         //Figures out how far the player needs to move based on the distance between the 2 mouse points
         range = Vector3.Distance(mouseStartPoint, mouseEndPoint);
-        var powerX = _playerMoveDirection.x;
-        var powerY = _playerMoveDirection.y;
-        rb.AddForce(powerX, powerY, 0, ForceMode.Impulse);
+        var powerX = _playerMoveDirection.x * power;
+        var powerY = _playerMoveDirection.y * power;
+        rb.AddForce(new (powerX, powerY), ForceMode2D.Impulse);
         _jetpackParticles.Emit(10);
 
         _projectSound.Play();
     }
-    public void FriendPowerCalcAndMove(Character_Controller_Script selectedFriend)
+    public void FriendPowerCalcAndMove(NewFriendController selectedFriend)
     {
         //Figures out how far the player needs to move based on the distance between the 2 mouse points
         range = Vector3.Distance(mouseStartPoint, mouseEndPoint);
-        var powerX = _friendMovedirection.x * 2f;
-        var powerY = _friendMovedirection.y * 2f;
-        selectedFriend.Rb.AddForce(powerX, powerY, 0, ForceMode.Impulse);
+        var powerX = _friendMovedirection.x * power;
+        var powerY = _friendMovedirection.y * power;
+        selectedFriend.Rb.AddForce(new (powerX, powerY), ForceMode2D.Impulse);
         selectedFriend.OnThrown();
 
         //_projectSound.Play();
@@ -183,17 +181,17 @@ public class PlayerMovement : MonoBehaviour
         friendListSelect += scrollInput;
         
         //bounds so selected element is never under or over the list count
-        if (friendListSelect < 0 && Friend_Chain_Controller.instance._connectedHands.Count > 0)
+        if (friendListSelect < 0 && friendChainController.connectedFriends.Length > 0)
         {
-            friendListSelect = Friend_Chain_Controller.instance._connectedHands.Count - 1;
+            friendListSelect = friendChainController.connectedFriends.Length - 1;
         }
 
-        if (friendListSelect < 0 && Friend_Chain_Controller.instance._connectedHands.Count == 0)
+        if (friendListSelect < 0 && friendChainController.connectedFriends.Length == 0)
         {
             friendListSelect = 0;
         }
 
-        if (friendListSelect >= Friend_Chain_Controller.instance._connectedHands.Count)
+        if (friendListSelect >= friendChainController.connectedFriends.Length)
         {
             friendListSelect = 0;
         }
@@ -222,11 +220,11 @@ public class PlayerMovement : MonoBehaviour
             //Debug.Log(lastPos);
             float angle = Mathf.Atan2(lastPosList[0].x, lastPosList[0].y) * Mathf.Rad2Deg;
             //rb.MoveRotation(Quaternion.AngleAxis(-angle + 180, Vector3.forward)); // Rb alternative
-            transform.rotation = Quaternion.AngleAxis(-angle + 180, Vector3.forward);
+            rb.MoveRotation(Quaternion.AngleAxis(-angle + 180, Vector3.forward)); // TODO;
             range = Vector3.Distance(gameObject.transform.position, lastPosList[0]);
-            var powerX = -lastPosList[0].x * 10f;//_playerMoveDirection.x;
-            var powerY = -lastPosList[0].y * 10f;//_playerMoveDirection.y;
-            rb.AddForce(powerX, powerY, 0, ForceMode.Impulse);
+            var powerX = -lastPosList[0].x * power;//_playerMoveDirection.x;
+            var powerY = -lastPosList[0].y * power;//_playerMoveDirection.y;
+            rb.AddForce(new(powerX, powerY), ForceMode2D.Impulse);
             _jetpackParticles.Emit(10);
 
             _projectSound.Play();
@@ -237,12 +235,9 @@ public class PlayerMovement : MonoBehaviour
     }
 
     public void OnFThrowGamepad(InputAction.CallbackContext context)
-    {
-        if (!Friend_Chain_Controller.instance.FriendCheck())
-            return;
-        
+    {   
         //Friend to throw is based on element in a list
-        Character_Controller_Script selectedFriend = Friend_Chain_Controller.instance._connectedHands[(int)friendListSelect];
+        NewFriendController selectedFriend = friendChainController.connectedFriends[(int)friendListSelect];
         
         
         var moveInput = context.ReadValue<Vector2>();
@@ -263,12 +258,12 @@ public class PlayerMovement : MonoBehaviour
             //Finds the angle between the first and second mouse point then angles that game object in that direction
             float angle = Mathf.Atan2(friendPosList[0].x, friendPosList[0].y) * Mathf.Rad2Deg;
             //selectedFriend.Rb.MoveRotation(Quaternion.AngleAxis(-angle + 180, Vector3.forward)); // Rb alternative
-            selectedFriend.transform.rotation = Quaternion.AngleAxis(-angle + 180, Vector3.forward);
+            selectedFriend.Rb.MoveRotation(Quaternion.AngleAxis(-angle + 180, Vector3.forward)); // TODO
         
             range = Vector3.Distance(gameObject.transform.position, friendPosList[0]);
             var powerX = -friendPosList[0].x * 20f;//_playerMoveDirection.x;
             var powerY = -friendPosList[0].y * 20f;//_playerMoveDirection.y;
-            selectedFriend.Rb.AddForce(powerX, powerY, 0, ForceMode.Impulse);
+            selectedFriend.Rb.AddForce(new (powerX, powerY), ForceMode2D.Impulse);
             selectedFriend.OnThrown();
             if (friendListSelect != 0)
             {
@@ -282,15 +277,17 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         //Shows friend head at bottom of screen
-        if (Friend_Chain_Controller.instance._connectedHands.Count > 0)
+        if (friendChainController.connectedFriends.Length > 0)
         {
-            friendSelected = Friend_Chain_Controller.instance._connectedHands[(int)friendListSelect].UISprite; ;
+            friendSelected = friendChainController.connectedFriends[(int)friendListSelect].UISprite;
+            friendUI.enabled = true;
             friendUI.sprite = friendSelected;
         }
         //Removes friend head when nothing held
-        if (Friend_Chain_Controller.instance._connectedHands.Count <= 0)
+        if (friendChainController.connectedFriends.Length < 1)
         {
             friendSelected = null;
+            friendUI.enabled = false;
             friendUI.sprite = null;
         }
         
@@ -329,10 +326,11 @@ public class PlayerMovement : MonoBehaviour
             _friendArrowRenderer.SetPosition(1, gamepadCursor.transform.position);
         }
         
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            pauseMenu.ShowPauseMenu();
-        }
+        // Not Required, Pause Menu already has an input reader
+        //if (Input.GetKeyDown(KeyCode.Escape))
+        //{
+        //    pauseMenu.ShowPauseMenu();
+        //}
     }
    
 }

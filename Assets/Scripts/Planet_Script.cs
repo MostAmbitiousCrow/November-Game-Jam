@@ -8,8 +8,8 @@ public class Planet_Script : MonoBehaviour
     [SerializeField] float _rotateSpeed;
 
     [Header("Friends")]
-    [SerializeField] List<Character_Controller_Script> _connectedFriends;
-    [SerializeField] List<Hand_Connector> _handPoints;
+    [SerializeField] List<NewFriendController> connectedFriends;
+    [SerializeField] List<Transform> hangPoints;
     [SerializeField] int _currentPoint = 0;
 
     [Header("Objective")]
@@ -24,12 +24,12 @@ public class Planet_Script : MonoBehaviour
     {
         if (other.CompareTag("Friend"))
         {
-            var friend = other.GetComponent<Friend_Controller>();
+            var friend = other.GetComponent<NewFriendController>();
             if(!friend.IsConnected) AddCharacterToOrbit(friend);
         }
         else if (other.CompareTag("Letter"))
         {
-            var letter = other.GetComponent<Letter_Controller>();
+            var letter = other.GetComponent<NewFriendController>();
             if(!letter.IsConnected)
             {
                 AddCharacterToOrbit(letter);
@@ -38,13 +38,13 @@ public class Planet_Script : MonoBehaviour
         }
     }
 
-    void AddCharacterToOrbit(Character_Controller_Script character)
+    void AddCharacterToOrbit(NewFriendController character)
     {
-        if (_currentPoint > _handPoints.Count - 1) return;
+        if (_currentPoint > hangPoints.Count - 1) return;
 
-        character.AttatchToPlanet(_handPoints[_currentPoint]);
+        character.AttatchToPlanetPoint(hangPoints[_currentPoint]);
         _currentPoint++;
-        _connectedFriends.Add(character);
+        connectedFriends.Add(character);
 
         if (character.CompareTag("Friend"))
         {
@@ -61,7 +61,7 @@ public class Planet_Script : MonoBehaviour
     {
         _artTransform.Rotate(_rotateSpeed * Time.fixedDeltaTime * Vector3.up);
 
-        foreach (var point in _handPoints)
+        foreach (var point in hangPoints)
         {
             // Calculate the direction to the target
             float angle = _rotateSpeed * Time.fixedDeltaTime;
@@ -71,12 +71,12 @@ public class Planet_Script : MonoBehaviour
         }
     }
 
-    public void RemoveFriends()
-    {
-        foreach (var hand in _handPoints)
-        {
-            hand.UnassignConnectedHand();
-        }
-        _handPoints.Clear();
-    }
+    //public void RemoveFriends()
+    //{
+    //    foreach (var point in hangPoints)
+    //    {
+    //        point.UnassignConnectedHand();
+    //    }
+    //    hangPoints.Clear();
+    //}
 }

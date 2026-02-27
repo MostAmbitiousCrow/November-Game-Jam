@@ -314,6 +314,139 @@ MonoBehaviour:
           category: 
           tags:
           - Player Sounds
+    - key: JingleLevelCompleted_01-9dcdbbb4-0150-4039-8dff-2715a09ffe29
+      value:
+        key: JingleLevelCompleted_01
+        id: JingleLevelCompleted_01-9dcdbbb4-0150-4039-8dff-2715a09ffe29
+        defaultKey: JingleLevelCompleted_01-9dcdbbb4-0150-4039-8dff-2715a09ffe29
+        value: {fileID: 8300000, guid: aea5f9d4a0cd0914294591c33a9c3496, type: 3}
+        path: Assets/Audio/Sounds/UISounds/JingleLevelCompleted_01.wav
+        dynamicStartTime:
+          time: 0
+          threshold: 0
+          option: 1
+          tabPos: 1
+        defaultSettings:
+          volume: 1
+          pitch: 1
+        showDynamicTime: 0
+        metaData:
+          category: 
+          tags: []
+    - key: LetterCollected-56237a24-cef6-4f38-91f8-2dc31ed82947
+      value:
+        key: LetterCollected
+        id: LetterCollected-56237a24-cef6-4f38-91f8-2dc31ed82947
+        defaultKey: LetterCollected-56237a24-cef6-4f38-91f8-2dc31ed82947
+        value: {fileID: 8300000, guid: c72475ccec3e1e142bf2f8c8f3d1d0d6, type: 3}
+        path: Assets/Audio/Sounds/UISounds/LetterCollected.wav
+        dynamicStartTime:
+          time: 0
+          threshold: 0
+          option: 1
+          tabPos: 1
+        defaultSettings:
+          volume: 1
+          pitch: 1
+        showDynamicTime: 0
+        metaData:
+          category: 
+          tags: []
+    - key: LevelEntered-774bf573-9e65-4471-b650-cfccd0320bd4
+      value:
+        key: LevelEntered
+        id: LevelEntered-774bf573-9e65-4471-b650-cfccd0320bd4
+        defaultKey: LevelEntered-774bf573-9e65-4471-b650-cfccd0320bd4
+        value: {fileID: 8300000, guid: 3dafe01f478e77e49ac0d24373044bd5, type: 3}
+        path: Assets/Audio/Sounds/UISounds/LevelEntered.wav
+        dynamicStartTime:
+          time: 0
+          threshold: 0
+          option: 1
+          tabPos: 1
+        defaultSettings:
+          volume: 1
+          pitch: 1
+        showDynamicTime: 0
+        metaData:
+          category: 
+          tags: []
+    - key: LevelReturnToMainMenu-c8326956-22a3-44a4-bfab-18ed967f9397
+      value:
+        key: LevelReturnToMainMenu
+        id: LevelReturnToMainMenu-c8326956-22a3-44a4-bfab-18ed967f9397
+        defaultKey: LevelReturnToMainMenu-c8326956-22a3-44a4-bfab-18ed967f9397
+        value: {fileID: 8300000, guid: d73c07291c0249144809870d266ffb9e, type: 3}
+        path: Assets/Audio/Sounds/UISounds/LevelReturnToMainMenu.wav
+        dynamicStartTime:
+          time: 0
+          threshold: 0
+          option: 1
+          tabPos: 1
+        defaultSettings:
+          volume: 1
+          pitch: 1
+        showDynamicTime: 0
+        metaData:
+          category: 
+          tags: []
+    - key: SceneTransitionClose-b10c4c99-3a4b-42eb-84fd-107c2e6f948e
+      value:
+        key: SceneTransitionClose
+        id: SceneTransitionClose-b10c4c99-3a4b-42eb-84fd-107c2e6f948e
+        defaultKey: SceneTransitionClose-b10c4c99-3a4b-42eb-84fd-107c2e6f948e
+        value: {fileID: 8300000, guid: e3c7fc68d24aceb49a099df184ddd878, type: 3}
+        path: Assets/Audio/Sounds/UISounds/SceneTransitionClose.wav
+        dynamicStartTime:
+          time: 0
+          threshold: 0
+          option: 1
+          tabPos: 1
+        defaultSettings:
+          volume: 1
+          pitch: 1
+        showDynamicTime: 0
+        metaData:
+          category: 
+          tags: []
+    - key: SceneTransitionOpening-5235be52-aaed-4e98-98ec-b07a968ddcc6
+      value:
+        key: SceneTransitionOpening
+        id: SceneTransitionOpening-5235be52-aaed-4e98-98ec-b07a968ddcc6
+        defaultKey: SceneTransitionOpening-5235be52-aaed-4e98-98ec-b07a968ddcc6
+        value: {fileID: 8300000, guid: 4c93918ff3aabe6418f1ce224b7148ad, type: 3}
+        path: Assets/Audio/Sounds/UISounds/SceneTransitionOpening.wav
+        dynamicStartTime:
+          time: 0
+          threshold: 0
+          option: 1
+          tabPos: 1
+        defaultSettings:
+          volume: 1
+          pitch: 1
+        showDynamicTime: 0
+        metaData:
+          category: 
+          tags: []
+    - key: UISelect-1e994b96-1705-4187-bbdf-6d0a7924aab6
+      value:
+        key: UISelect
+        id: UISelect-1e994b96-1705-4187-bbdf-6d0a7924aab6
+        defaultKey: UISelect-1e994b96-1705-4187-bbdf-6d0a7924aab6
+        value: {fileID: 8300000, guid: e5b858ab0267fde44aa086650bfd6f31, type: 3}
+        path: Assets/Audio/Sounds/UISounds/UISelect.wav
+        dynamicStartTime:
+          time: 0
+          threshold: 0
+          option: 1
+          tabPos: 1
+        defaultSettings:
+          volume: 1
+          pitch: 1
+        showDynamicTime: 0
+        metaData:
+          category: 
+          tags: []
   groups:
     list: []
   mixers:
