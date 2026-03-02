@@ -14,11 +14,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: bc9049682929f5a47a897eb284d68d1f, type: 2}
     - target: {fileID: 5848984895744794458, guid: 2f2e5d1a005440d4c8df07a0e15d4b61, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -20.5
+      value: 128.7
       objectReference: {fileID: 0}
     - target: {fileID: 5848984895744794458, guid: 2f2e5d1a005440d4c8df07a0e15d4b61, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.1
+      value: 11.95
       objectReference: {fileID: 0}
     - target: {fileID: 5848984895744794458, guid: 2f2e5d1a005440d4c8df07a0e15d4b61, type: 3}
       propertyPath: m_LocalPosition.z
@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Planet (2) Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8136854599214515293, guid: 2f2e5d1a005440d4c8df07a0e15d4b61, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8cc6b13a11420b646a11fd4302c28a83, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

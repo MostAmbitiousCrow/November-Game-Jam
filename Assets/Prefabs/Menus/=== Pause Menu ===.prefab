@@ -317,6 +317,7 @@ GameObject:
   - component: {fileID: 1937087047060164550}
   - component: {fileID: 7750154130623973101}
   - component: {fileID: 557192885324825029}
+  - component: {fileID: 8753022858026842651}
   m_Layer: 0
   m_Name: === Pause Menu ===
   m_TagString: Untagged
@@ -468,7 +469,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _eventSystem: {fileID: 7750154130623973101}
-  _audioSource: {fileID: 2975854705537476227}
+  _audioSource: {fileID: 8753022858026842651}
   _canvas: {fileID: 8199408995818925659}
   _transitionArtController: {fileID: 7665587661956358317}
   screenDatas:
@@ -522,6 +523,34 @@ MonoBehaviour:
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
   m_ScrollDeltaPerTick: 6
+--- !u!114 &8753022858026842651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022501598064397607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7444b0a6e88911f44961f06ff94992ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playInstantly: 0
+  isGroup: 0
+  request: 
+  groupRequest: 
+  editModuleSettings:
+    list: []
+  showEvents: 0
+  onStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  onLooped:
+    m_PersistentCalls:
+      m_Calls: []
+  onCompleted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1075258730105891499
 GameObject:
   m_ObjectHideFlags: 0

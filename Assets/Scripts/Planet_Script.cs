@@ -15,26 +15,32 @@ public class Planet_Script : MonoBehaviour
     [Header("Objective")]
     [SerializeField] bool _hasLetter;
 
-    private void FixedUpdate()
-    {
-        RotatePlanet();
-    }
+    // private void FixedUpdate() // Previously used for 3D planets. Removed for 2D.
+    // {
+    //     RotatePlanet();
+    // }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Friend"))
+        // if (other.CompareTag("Friend"))
+        // {
+        //     var friend = other.GetComponent<NewFriendController>();
+        //     if(!friend.IsConnected) AddCharacterToOrbit(friend);
+        // }
+        // else if (other.CompareTag("Letter"))
+        // {
+        //     var letter = other.GetComponent<NewFriendController>();
+        //     if(!letter.IsConnected)
+        //     {
+        //         AddCharacterToOrbit(letter);
+        //         Objective_Manager.Instance.DeliveredLetter();
+        //     }
+        // }
+
+        if (other.CompareTag("Letter"))
         {
-            var friend = other.GetComponent<NewFriendController>();
-            if(!friend.IsConnected) AddCharacterToOrbit(friend);
-        }
-        else if (other.CompareTag("Letter"))
-        {
-            var letter = other.GetComponent<NewFriendController>();
-            if(!letter.IsConnected)
-            {
-                AddCharacterToOrbit(letter);
-                Objective_Manager.Instance.DeliveredLetter();
-            }
+            Objective_Manager.Instance.DeliveredLetter();
+            
         }
     }
 
