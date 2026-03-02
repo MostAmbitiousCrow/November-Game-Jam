@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &870005329070788469
+--- !u!1001 &2534682927534804857
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,19 +10,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2473059353563623043, guid: c388cfdb87df498488c2128bdd781023, type: 3}
       propertyPath: m_Name
-      value: Miner Obstacle Variant (1) Variant
+      value: Miner Obstacle Variant Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4277133788451837115, guid: c388cfdb87df498488c2128bdd781023, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 27afb0c17700c374a9aee2b596ecafd9, type: 3}
+    - target: {fileID: 5681985783211558307, guid: c388cfdb87df498488c2128bdd781023, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 1a374495b3745174a966b395d3ffd001, type: 2}
     - target: {fileID: 7173375485523684410, guid: c388cfdb87df498488c2128bdd781023, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.255205
+      value: -7.478758
       objectReference: {fileID: 0}
     - target: {fileID: 7173375485523684410, guid: c388cfdb87df498488c2128bdd781023, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -7.5163107
       objectReference: {fileID: 0}
     - target: {fileID: 7173375485523684410, guid: c388cfdb87df498488c2128bdd781023, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -17.078806
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7173375485523684410, guid: c388cfdb87df498488c2128bdd781023, type: 3}
       propertyPath: m_LocalRotation.w
