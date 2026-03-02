@@ -2097,6 +2097,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6892859399480488557, guid: 0f99a4d0292e78443b92f9a1b1dcd1f0, type: 3}
+      propertyPath: levelSceneName
+      value: Level-4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6892859399480488557, guid: 0f99a4d0292e78443b92f9a1b1dcd1f0, type: 3}
       propertyPath: completedSprite
       value: 
       objectReference: {fileID: 21300000, guid: 3db00aff21892634f8709bb3ee029af8, type: 3}
@@ -2106,7 +2110,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 4957859a1d7491f45a2fb52291ebb434, type: 3}
     - target: {fileID: 8205542671034678452, guid: 0f99a4d0292e78443b92f9a1b1dcd1f0, type: 3}
       propertyPath: m_Name
-      value: Level Item ()
+      value: Level Item (Level-4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2320,6 +2324,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5877786522118266502, guid: 694b6b51361da3c418648d19a1ef24be, type: 3}
+      propertyPath: levelSceneName
+      value: Level-3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5877786522118266502, guid: 694b6b51361da3c418648d19a1ef24be, type: 3}
       propertyPath: completedSprite
       value: 
       objectReference: {fileID: 21300000, guid: 7a6a559ee01f909448885d5bdb1dfeb1, type: 3}
@@ -2329,7 +2337,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 0d2ddf5940864604181839dc46a6b8f1, type: 3}
     - target: {fileID: 9215980278090813535, guid: 694b6b51361da3c418648d19a1ef24be, type: 3}
       propertyPath: m_Name
-      value: Level Item ()
+      value: Level Item (Level-3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
