@@ -38,7 +38,7 @@ public class Objective_Manager : MonoBehaviour
         LevelDetailsInstance.SetLevelCompleted();
 
         // Return to Level Select
-        SceneLoader.LoadSceneRequest?.Invoke("Level Select");
+        SceneLoader.LoadSceneRequest?.Invoke(GameProgress.LevelsComplete >= 4 ? "Complete" : "Level Select");
         Debug.Log("Letter Delivered, returning to level select!");
     }
 

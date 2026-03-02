@@ -4,15 +4,15 @@ using UnityEngine;
 public static class GameProgress
 {
     public static Action ProgressUpdate;
+    public static int LevelsComplete;
 
     //------------------------------
     // Level Progress
     public static void UpdateCompletedLevel(int level)
     {
-        if (PlayerPrefs.GetInt($"Level{level}Complete", 0) == 0)
-        {
-            PlayerPrefs.SetInt($"Level{level}Complete", 1);
-        }
+        if (PlayerPrefs.GetInt($"Level{level}Complete", 0) != 0) return;
+        PlayerPrefs.SetInt($"Level{level}Complete", 1);
+        LevelsComplete++;
     }
 
     /// <summary>
@@ -27,12 +27,15 @@ public static class GameProgress
     public static void ResetCompletedLevels()
     {
         for (int i = 0; i <= 10; i++) PlayerPrefs.SetInt($"Level{i}Complete", 0);
+        LevelsComplete = 0;
         Debug.Log("All levels marked as incomplete.");
     }
 
     public static void AchieveLevels()
     {
         for (int i = 0; i <= 10; i++) UpdateCompletedLevel(i);
+
+        LevelsComplete = 4;
         Debug.Log("All levels marked as completed.");
     }
 
