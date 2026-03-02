@@ -12,17 +12,21 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 1a71f4eeaa88a5d4d83436a99741e846, type: 2}
+    - target: {fileID: 5565364534177296267, guid: c395905499fea5c479597287f25ffbb4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 044d147f1f5d3434c86cb2e783822b6c, type: 3}
     - target: {fileID: 7660834881659291839, guid: c395905499fea5c479597287f25ffbb4, type: 3}
       propertyPath: m_Name
       value: Planet (4) Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7853164421351273612, guid: c395905499fea5c479597287f25ffbb4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -20.5
+      value: -44.72
       objectReference: {fileID: 0}
     - target: {fileID: 7853164421351273612, guid: c395905499fea5c479597287f25ffbb4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.1
+      value: -52.19
       objectReference: {fileID: 0}
     - target: {fileID: 7853164421351273612, guid: c395905499fea5c479597287f25ffbb4, type: 3}
       propertyPath: m_LocalPosition.z
